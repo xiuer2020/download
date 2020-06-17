@@ -1,0 +1,23 @@
+事件对象
+    currentTarget
+    当事件遍历DOM时，事件接口的currentTarget只读属性标识事件的当前目标。它总是引用附加了事件处理程序的元素，而不是事件。目标，它标识事件发生时所在的元素以及可能是其后代的元素。
+
+    target
+    事件接口的目标属性是对分派事件的对象的引用。它不同于事件。在事件冒泡或捕获阶段调用事件处理程序时调用currentTarget。
+
+
+
+绑定事件句柄
+    addEventListener(obj,eventName,callback)		obj为绑定事件,eventName传入事件名,callback传入该事件调用的函数
+    removeEventListener(obj,eventName,callback)		obj为绑定事件,eventName传入事件名,callback传入该事件调用的函数
+
+    JSON.stringify(obj)					将对象转换成字符串	
+    JSON.parse()					用于将一个 JSON 字符串转换为对象。
+
+
+==============================
+
+toSource() 					方法表示对象的源代码。
+
+==============================
+

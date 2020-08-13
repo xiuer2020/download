@@ -1,0 +1,30 @@
+$ core-js                       是我们能够使用新的API的最重要的包
+$ less-loader                   css预处理器
+$ node-less                     如何在浏览器端解析less文件
+$ vue                           渐进式框架
+$ vue-router                    是 Vue.js 官方的路由管理器
+$ vuex                          状态（全局状态）管理
+$ @vue/cli-plugin-babel         转译Es5
+$ @vue/cli-plugin-eslint        代码规则配置
+$ @vue/cli-plugin-router    
+$ @vue/cli-service              启动一个一个开发服务器, 项目打包, 
+$ @vue/eslint-config-prettier   代码风格
+$ axios                         网络请求
+$ babel-eslint                  代码规范
+$ eslint                        可将 静态代码分析 和 问题代码协助修复 集成到 编码、提交 和 打包 过程中
+$ eslint-plugin-prettier        代码风格
+$ eslint-plugin-vue             代码风格
+$ less                          css预处理器
+$ prettier                      代码风格
+$ style-resources-loader        全局 less
+$ vue-cli-plugin-axios          网络请求插件
+$ vue-template-compiler         
+
+
+
+
+
+
+
+
+

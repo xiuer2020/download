@@ -6,6 +6,10 @@
 % package-lock.json 文件用于锁定安装时的包的版本号
 %README.md 文件能简要的描述该项目的信息，让读者快速了解这个项目。
 
+文件功能
+========================
+
+
 plugins/axios
     1 设置基础请求路径
     2 设置post请求头
@@ -38,6 +42,20 @@ store/type
 store/modules 
     1 导入个vuex对象整合为对象导出    
 
+项目架构
+
+========================
+
+执行命令 npm i style-resources-loader 安装插件并在vue.congig.js文件中配置全局less变量路径
+
+项目前准备
+
+========================
+========================
+
+注意项
+
 1. 初始值配合getter && 
 2. 遍历对象是数组或者是symbol数据
 3. mouted周期晚于created周期, v-if应使用于created之前
+

@@ -48,7 +48,7 @@ git push --set-upstream origin dev
 
 git branch <name>                   创建分支
 git branch                          查看分支（带星号的就是当前使用分支）
-git switch <name>                   然后切换到分支
+git checkout <name>                   然后切换到分支
 git branch -d <name>                删除分支 
 git log --graph --pretty=oneline    查看分支合并图
 git merge <name>                    合并某分支到当前分支

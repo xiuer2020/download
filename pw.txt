@@ -20,3 +20,4 @@ boss直聘: 6-20
 前程无忧: 6-16
 百度账号: 8-14
 github: 8-15
+root: 'password'

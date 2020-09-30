@@ -21,6 +21,13 @@ Vue.use(VueCookies)
 Vue.config.productionTip = false;
 // 阻止启动生产消息，常用作指令。
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+//导入bootstrap
+
+import 'font-awesome/css/font-awesome.min.css'
+//导入font-awesome图标库
+
 new Vue({
   router,
   store,

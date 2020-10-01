@@ -10,6 +10,7 @@ $ less-loader                   css预处理器
 $ vue-template-compiler         组件编译器
 $ @vue/cli-service              启动一个一个开发服务器, 项目打包, 
 $ style-resources-loader        全局 less
+$ vue-cli-plugin-style-resources-loader 读取vue.config.js下配置
 $ eslint                        可将静态代码分析和问题代码协助修复集成到编码、提交和打包过程中,可在.eslintrc的文件进行配置
 $ prettier                      代码风格支持
 $ babel-eslint                  es6代码检测

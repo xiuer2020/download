@@ -1,0 +1,538 @@
+标签分类
+================================
+
+由于划分内容的元素
+	address
+		表示文档或article的练习方式
+	article
+		表示一段独立的内容
+	aside
+		表示与周边内容稍有牵涉的内容
+	details
+		生成一个区域,用户将其展开可以获得更多细节知识
+	footer
+		表示尾部
+	h1-h6
+		表示标题
+	header
+		表示首部
+	hgroup
+		将一组标题组织在一起,以便文档大纲只显示其中一个大标题
+	nav
+		表示有意集中在一起的导航元素
+	section
+		表示一个重要的概念或主题
+	summary
+		用在details元素中,表示该元素内容的标题或声明
+
+================================
+表格元素
+	caption
+		表示表格标题
+	col
+		表示一列
+	colgroup
+		表示一组列
+	table
+		表示表格
+	tbody
+		表示表格主体
+	td
+		表示表格单元格
+	tfoot
+		表示表脚
+	th
+		表示标题行单元格
+	thead
+		表示标题行
+	tr
+		表示一行单元格
+   
+
+================================
+表单元素
+	botton
+		表示可用来提交或重置表单的按钮(或一般按钮)
+	datalist
+		定义一组提供给用户的建议值
+	fieldset
+		表示一组表单元素
+	form
+		表示HTML表单
+	input
+		表示用来收集用户输入数据的控件
+	keygen
+		生成一对公钥和私钥
+	label
+		表示表单元素的声明标签
+	legend
+		表示fieldset元素的声明标签
+	optgroup
+		表示一组相关的option
+	option
+		表示供用户选择的一个选项
+	select
+		给用户提供一组固定的选项
+	textarea
+		用户可以用它输入多行文字
+    botton
+        表示可用来提交或重置表单的按钮(或一般按钮)
+    datalist
+        定义一组提供给用户的建议值
+    fieldset
+        表示一组表单元素
+    form
+        表示HTML表单
+    input
+        表示用来收集用户输入数据的控件
+    keygen
+        生成一对公钥和私钥
+    label
+        表示表单元素的声明标签
+    legend
+        表示fieldset元素的声明标签
+    optgroup
+        表示一组相关的option
+    option
+        表示供用户选择的一个选项
+    select
+        给用户提供一组固定的选项
+    textarea
+        用户可以用它输入多行文字
+
+================================
+文本元素
+	a
+		生成超链接
+	abbr
+		缩略语
+	b
+		不带强调或着重意味地标记一段文字
+	br
+		表示换行
+	cite
+		表示其他作品的标题
+	code
+		表示计算机代码片段
+	del
+		表示从文档中删除的文字
+	dfn
+		表示术语定义
+	em
+		表示着重强调的一段文字
+	i
+		表示与这边内容秉性不同的一段文字,例如来自另一种语言的词语
+	ins
+		表示加入文档的文字
+	kbd
+		表示用户输入内容
+	mark
+		表示一段因为与上下文中另一词语相关而被突出显示的内容
+	q
+		表示引自他处的内容
+	rp
+		与ruby元素结合使用,标记括号
+	rt
+		与ruby元素结合使用,标记注音符号
+	ruby
+		表示位于表意文字上方或右方的注音符号
+	s
+		表示文字已不在准确
+	samp
+		表示计算机程序的输出内容
+	small
+		表示小号字体字体内容
+	span
+		一个没有自己语义的通用元素,可以用在希望应用一些全局属性却又不想引入额外语义的情况
+	strong
+		表示重要内容
+	sub
+		表示下标文字
+	sup
+		表示上标文字
+	time
+		表示时间或日期
+	u
+		不带强调或着重意味地标记一段文字
+	var
+		表示程序或计算机系统中的变量
+	wbr
+		表示可安全换行的地方
+
+================================
+文档和元数据元素
+	base
+		设置相对URL的基础
+	body
+		文档的内容
+	DOCTYPE
+		表示HTML文档的开始
+	head
+		包含文档的元数据
+	link
+		定义与外部资源(通常是样式表或网站图标)的关系
+	meta
+		提供关于文档的信息
+	noscript
+		包含浏览器禁用基本或不支持脚本时显示的内容
+	script
+		定义基本程序,可以是文档内嵌的,也可以是外部文件的
+	style
+		定义CSS样式
+	titile
+		设置文档标题
+
+
+================================
+用于分组的元素
+	blockquote
+		表示引自他处的大段文字
+	dd
+		用在dl元素中,表示定义
+	div
+		一个没有任何既定语义的通用元素,是span元素在流元素中的对应物
+	dl
+		表示包含一系列术语和定义的说明列表
+	dt
+		用在dl元素中,表示术语
+	figcaption
+		表示figure元素的标题
+	figure
+		表示图片
+	hr
+		表示段落级别的主题转换
+	li
+		用在ul,ol和menu元素中,表示列表项
+	ol
+		表示有序列表
+	p
+		表示段落
+	pre
+		表示其格式应被保留的内容
+	ul
+		表示无序列表
+
+================================
+
+标签详情
+================================
+
+global属性			
+    id, inputmode, tabindex, title
+================================
+
+audio
+    autoplay				boolean
+    controls				boolean
+    crossorigin			
+    anonymous
+    use-credentials
+    anonymous
+    currentTime			
+    disableRemotePlayback
+    duration 				boolean
+    loop				    boolean
+    muted				    boolean
+    preload				    
+    src				        string
+
+================================
+
+
+
+input标签
+    all		    =>  autocomplete, autofocus, disabled, form, list, name, readonly, required, type, value
+    file		=>	accept, capture, multiple
+    image		=>	alt, formaction, formenctype, formmethod, formnovalidate, formtarget ,height, src, width
+    radio		=>	checked
+    checkbox		=>	checked
+    text		=>	dirname, maxlength, pattern, size, placeholder
+    search		=>	dirname, maxlength, placeholder
+    submit		=>	formaction, formenctype, formmethod, formnovalidate, formtarget
+    password    =>	maxlength, pattern, placeholder, size
+    tel		    =>	maxlength, pattern, placeholder, size
+    url		    =>	maxlength, placeholder
+    email		=>	multiple, size
+
+audio & video
+    all		    =>	autoplay, controls, crossorigin(anoymous,use-credentials), currentTime, disableRemotePlayback, duration, loop, muted, 
+                    preload, src
+
+================================
+
+音视频对象
+    HTML 音频/视频 方法
+        addTextTrack()	
+        向音频/视频添加新的文本轨道。
+        canPlayType()	
+        检测浏览器是否能播放指定的音频/视频类型。
+        load()	
+        重新加载音频/视频元素。
+        play()	
+        开始播放音频/视频。
+        pause()	
+        暂停当前播放的音频/视频。
+
+        HTML 音频/视频属性
+        audioTracks	
+        返回表示可用音频轨道的 AudioTrackList 对象。
+        autoplay	
+        设置或返回是否在加载完成后随即播放音频/视频。
+        buffered	
+        返回表示音频/视频已缓冲部分的 TimeRanges 对象。
+        controller	
+        返回表示音频/视频当前媒体控制器的 MediaController 对象。
+        controls	
+        设置或返回音频/视频是否显示控件（比如播放/暂停等）。
+        crossOrigin	
+        设置或返回音频/视频的 CORS 设置。
+        currentSrc	
+        返回当前音频/视频的 URL。
+        currentTime	
+        设置或返回音频/视频中的当前播放位置（以秒计）。
+        defaultMuted	
+        设置或返回音频/
+        视频默认是否静音。
+        defaultPlaybackRate	
+        设置或返回音频/视频的默认播放速度。
+        duration	
+        返回当前音频 /视频的长度（以秒计）。
+        ended	
+        返回音频/视频的播放是否已结束。
+        error	
+        返回表示音频/视频错误状态的 MediaError 对象。
+        loop	
+        设置或返回音频/视频是否应在结束时重新播放。
+        mediaGroup	
+        设置或返回音频/视频所属的组合（用于连接多个音频/视频元素）。
+        muted	
+        设置或返回音频/视频是否静音。
+        networkState	
+        返回音频/视频的当前网络状态。
+        paused	
+        设置或返回音频/视频是否暂停。
+        playbackRate	
+        设置或返回音频/视频播放的速度。
+        played	
+        返回表示音频/视频已播放部分的 TimeRanges 对象。
+        preload	
+        设置或返回音频/视频是否应该在页面加载后进行加载。
+        readyState	
+        返回音频/视频当前的就绪状态。
+        seekable	
+        返回表示音频/视频可寻址部分的 TimeRanges 对象。
+        seeking	
+        返回用户是否正在音频/视频中进行查找。
+        src	
+        设置或返回音频/视频元素的当前来源。
+        startDate	
+        返回表示当前时间偏移的 Date 对象。
+        textTracks	
+        返回表示可用文本轨道的 TextTrackList 对象。
+        videoTracks	
+        返回表示可用视频轨道的 VideoTrackList 对象。
+        volume	
+        设置或返回音频/视频的音量。
+
+        HTML 音频/视频事件
+        abort	
+        当音频/视频的加载已放弃时触发。
+        canplay	
+        当浏览器可以开始播放音频/视频时触发。
+        canplaythrough	
+        当浏览器可在不因缓冲而停顿的情况下进行播放时触发。
+        durationchange	
+        当音频/视频的时长已更改时触发。
+        emptied	
+        当目前的播放列表为空时触发。
+        ended	
+        当目前的播放列表已结束时触发。
+        error	
+        当在音频/视频加载期间发生错误时触发。
+        loadeddata	
+        当浏览器已加载音频/视频的当前帧时触发。
+        loadedmetadata	
+        当浏览器已加载音频/视频的元数据时触发。
+        loadstart	
+        当浏览器开始查找音频/视频时触发。
+        pause	
+        当音频/视频已暂停时触发。
+        play	
+        当音频/视频已开始或不再暂停时触发。
+        playing	
+        当音频/视频在因缓冲而暂停或停止后已就绪时触发。
+        progress	
+        当浏览器正在下载音频/视频时触发。
+        ratechange	
+        当音频/视频的播放速度已更改时触发。
+        seeked	
+        当用户已移动/跳跃到音频/视频中的新位置时触发。
+        seeking	
+        当用户开始移动/跳跃到音频/视频中的新位置时触发。
+        stalled	
+        当浏览器尝试获取媒体数据，但数据不可用时触发。
+        suspend	
+        当浏览器刻意不获取媒体数据时触发。
+        timeupdate	
+        当目前的播放位置已更改时触发。
+        volumechange	
+        当音量已更改时触发。
+        waiting	
+        当视频由于需要缓冲下一帧而停止时触发。
+
+================================
+
+    HTMLCanvasElement对象
+        width		
+        Number,default:300
+        height
+        Numbef,default:150
+
+        方法
+            toBlob(callback, mimeType, qualityArgument)
+            toDataURL(type, encoderOptions)
+            canvas.getContext(contextType[, contextAttributes]);
+            captureStream(frameRate)
+
+================================
+
+CanvasRenderingContext2D对象
+
+    颜色、样式和阴影
+
+    fillStyle	
+    设置或返回用于填充绘画的颜色、渐变或模式。
+    strokeStyle	
+    设置或返回用于笔触的颜色、渐变或模式。
+    shadowColor	
+    设置或返回用于阴影的颜色。
+    shadowBlur	
+    设置或返回用于阴影的模糊级别。
+    shadowOffsetX	
+    设置或返回阴影与形状的水平距离。
+    shadowOffsetY	
+    设置或返回阴影与形状的垂直距离。
+
+    颜色、样式和阴影(方法)
+
+    createLinearGradient(x0, y0, x1, y1)	
+    创建线性渐变（用在画布内容上）。
+    createPattern(image, repetition)	
+    在指定的方向上重复指定的元素。
+    createRadialGradient()	
+    创建放射状/环形的渐变（用在画布内容上）。
+    addColorStop()	
+    规定渐变对象中的颜色和停止位置。
+
+    线条样式
+
+    lineCap	
+    设置或返回线条的结束端点样式。
+    lineJoin	
+    设置或返回两条线相交时，所创建的拐角类型。
+    lineWidth	
+    设置或返回当前的线条宽度。
+    miterLimit	
+    设置或返回最大斜接长度。
+
+    矩形
+
+    rect(x, y, width, height)	
+    创建矩形。
+    fillRect(x, y, width, height)	
+    绘制"被填充"的矩形。
+    strokeRect(x, y, width, height)	
+    绘制矩形（无填充）。
+    clearRect(x, y, width, height)	
+    在给定的矩形内清除指定的像素。
+
+    路径
+        
+    fill([path [, fillRule]])
+    填充当前绘图（路径）。
+    stroke([path])
+    绘制已定义的路径。
+    beginPath()	
+    起始一条路径，或重置当前路径。
+    moveTo(x, y)
+    把路径移动到画布中的指定点，不创建线条。
+    closePath()	
+    创建从当前点回到起始点的路径。
+    lineTo(x, y)
+    添加一个新点，然后在画布中创建从该点到最后指定点的线条。
+    clip([path[,fillRule])	
+    从原始画布剪切任意形状和尺寸的区域。
+    quadraticCurveTo(cpx, cpy, x, y)
+    创建二次贝塞尔曲线。
+    bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+    创建三次贝塞尔曲线。
+    arc(x, y, radius, startAngle, endAngle [, anticlockwise])	
+    创建弧/曲线（用于创建圆形或部分圆）。
+    arcTo(x1, y1, x2, y2, radius)	
+    创建两切线之间的弧/曲线。
+    isPointInPath([path,] x, y [, fillRule])	
+    如果指定的点位于当前路径中，则返回 true，否则返回 false。
+
+    转换
+
+    scale(x, y)	
+    缩放当前绘图至更大或更小。
+    rotate(angle)
+    旋转当前绘图。
+    translate(x, y)	
+    重新映射画布上的 (0,0) 位置。
+    transform(a, b, c, d, e, f)	
+    替换绘图的当前转换矩阵。
+    setTransform(a, b, c, d, e, f)
+    setTransform(matrix)	
+    将当前转换重置为单位矩阵。然后运行 transform()。
+
+    文本
+
+    font = 'bold 16px serif'
+    设置或返回文本内容的当前字体属性。
+    textAlign= 'left'
+    设置或返回文本内容的当前对齐方式。
+    textBaseline  = "top"	
+    设置或返回在绘制文本时使用的当前文本基线。
+
+    文本(方法)
+
+    fillText(text, x, y [, maxWidth])
+    在画布上绘制"被填充的"文本。
+    strokeText(text, x, y [, maxWidth])	
+    在画布上绘制文本（无填充）。
+    measureText(text)	
+    返回包含指定文本宽度的对象。
+
+    图像绘制
+
+    drawImage(image, dx, dy[, dWidth, dHeight]);
+    ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);	
+    向画布上绘制图像、画布或视频。
+        
+
+    像素操作(方法)
+
+    createImageData(width, height)
+    createImageData(imagedata)
+    创建新的、空白的 ImageData 对象。
+    getImageData(sx, sy, sw, sh)
+    返回 ImageData 对象，该对象为画布上指定的矩形复制像素数据。
+    putImageData(imageData, dx, dy[, dirtyX, dirtyY, dirtyWidth, dirtyHeight])	
+    把图像数据（从指定的 ImageData 对象）放回画布上。
+
+    合成
+    globalAlpha = 0.5
+    设置或返回绘图的当前 alpha 或透明值。
+    globalCompositeOperation	
+    设置或返回新图像如何绘制到已有的图像上。
+
+    其他
+    save()	
+    保存当前环境的状态。
+    restore()	
+    返回之前保存过的路径状态和属性。
+    createEvent()	 
+    方法通过弹出绘图状态堆栈中的顶部条目来恢复最近保存的画布状态。如果没有保存状态，则此方法不执行任何操作。		 
+

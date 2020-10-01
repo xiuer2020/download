@@ -1,0 +1,31 @@
+$ core-js                       是我们能够使用新的API的最重要的包
+$ vuex                          状态（全局状态）管理
+$ vue                           渐进式框架
+$ vue-router                    路由管理
+$ axios                         网络请求
+vue必备环境依赖包
+
+$ less                          less语法支持
+$ less-loader                   css预处理器
+$ vue-template-compiler         组件编译器
+$ @vue/cli-service              启动一个一个开发服务器, 项目打包, 
+$ style-resources-loader        全局 less
+$ eslint                        可将静态代码分析和问题代码协助修复集成到编码、提交和打包过程中,可在.eslintrc的文件进行配置
+$ prettier                      代码风格支持
+$ babel-eslint                  es6代码检测
+vue必备开发依赖包
+
+$ @vue/cli-plugin-babel         设置babel忽略文件
+$ @vue/cli-plugin-eslint        代码规则配置
+$ @vue/eslint-config-prettier   代码风格
+$ eslint-plugin-prettier        代码风格检测和配置
+$ eslint-plugin-vue             修复检测出的报错
+
+
+
+
+
+
+
+
+

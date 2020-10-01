@@ -1,0 +1,101 @@
+常用命令
+
+git命令
+==================
+
+路径：C:\Users\Administrator\.ssh下
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+配置主机名和地址
+默认模式 本地Git仓库和GitHub仓库之间的传输是通过SSH加密
+
+第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+
+$ ssh-keygen -t rsa -C "youremail@example.com"
+生成秘钥
+
+id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人
+
+第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+
+然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+
+安装
+
+===================
+
+
+git init
+初始化
+git remote add origin git@github.com:FindIndex/learn-git.git
+# 添加远程仓库 origin这个远程仓库的名字 FindIndex用户名  learn-git仓库名
+git push -u origin master
+# 推送到远程仓库master分支
+git remote remove <name>
+# 删除远程仓库配置
+
+创建git仓库
+
+===================
+
+git add <file>
+git commit <file> -m '备注信息'
+git push --set-upstream origin dev
+
+流程： 将更改添加至暂存区 > 提交更改 > 推送至分支
+
+===================
+
+git branch <name>                   创建分支
+git branch                          查看分支（带星号的就是当前使用分支）
+git checkout <name>                   然后切换到分支
+git branch -d <name>                删除分支 
+git log --graph --pretty=oneline    查看分支合并图
+git merge <name>                    合并某分支到当前分支
+git --version                       命令提示
+git status                          查看仓库状态
+git diff                            文件版本对比
+git log                             命令查看版本记录
+git reset --hard HEAD^              历史版本回退（前进）
+git reflog                          查看所有操作记录
+git restore <file>...               撤销工作区修改 用暂存区替换工作区
+git restore --staged <file>...      撤销暂存区修改 工作区不变
+$ git pull                          从远程仓库拉到本地
+
+
+===================
+
+linux/cmd常用命令
+
+目录操作
+1.进入目录	->	cd
+2.列出文件	->	ls/dir
+3.查看当前路径	->	pwd
+4.创建文件夹	->	mkdir
+5.移动/重命名	->	mv
+6.删除目录	=>	rmdir /q /s
+
+文件操作
+1.新建文件	->	touch
+2.编辑文件	->	vi/vim
+3.查看文件内容	->	cat
+4.查看文件信息	->	stat
+5.删除文件	->	rm/del
+
+
+其他
+1.清空终端	->	clear/cls
+2.打开帮助	->	--help -h
+
+===================
+===================
+===================
+===================
+===================
+===================
+===================
+
+
+
+
+

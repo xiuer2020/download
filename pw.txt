@@ -1,0 +1,24 @@
+网易邮箱163: 6-16字符
+网易邮箱126: 6-16字符
+
+
+账号: call_me2020@163.com
+授权码: LGHWNDDQZXPEUAAM
+账号: call_me2020@126.com
+授权码: AASVDFQNFFWISIWE
+账号: call_me2020@126.com
+授权码: KBOMYREZSITNAENN
+
+
+抖音短视频: 8-20
+qq: 8-16
+微信: 8-16
+支付宝登录: 8-20
+淘宝登录: 6-20
+融易分期: 6-16
+boss直聘: 6-20
+前程无忧: 6-16
+百度账号: 8-14
+github: 8-15
+gitclone: 8++
+root: 'password'

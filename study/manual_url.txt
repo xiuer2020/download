@@ -1,0 +1,9 @@
+css
+    https://www.runoob.com/cssref/css-reference.html
+
+javasript
+    https://www.runoob.com/jsref/jsref-tutorial.html
+
+jquery
+    https://www.runoob.com/jquery/jquery-tutorial.html
+

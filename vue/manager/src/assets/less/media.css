@@ -1,53 +1,41 @@
-@grid-width: 30;
-@grid-sm: 720px + @grid-width;
-@grid-md: 940px + @grid-width;
-@grid-lg: 1140px + @grid-width;
 /* @screen-xs: 480px; */
-@screen-sm: 768px;
-@screen-md: 992px;
-@screen-lg: 1200px;
-
-
 .r-layout {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  @media (min-width: @screen-sm) {
-    max-width: @grid-sm;
-  }
-
-  @media (min-width: @screen-md) {
-    max-width: @grid-md;
-  }
-
-  @media (min-width: @screen-lg) {
-    max-width: @grid-lg;
+}
+@media (min-width: 768px) {
+  .r-layout {
+    max-width: 750px;
   }
 }
-// 响应式盒子
-
-
+@media (min-width: 992px) {
+  .r-layout {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .r-layout {
+    max-width: 1170px;
+  }
+}
 html {
   font-size: 62.5%;
 }
-
 @media only screen and (min-width: 768px) {
   html {
     font-size: 125%;
   }
 }
-
 @media only screen and (min-width: 992px) {
   html {
     font-size: 187.5%;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 250%;
   }
 }
-// 响应式根字体大小
+/*# sourceMappingURL=./media.css.map */

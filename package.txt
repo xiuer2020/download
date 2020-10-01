@@ -11,6 +11,7 @@ $ vue-template-compiler         组件编译器
 $ @vue/cli-service              启动一个一个开发服务器, 项目打包, 
 $ style-resources-loader        全局 less
 $ eslint                        可将静态代码分析和问题代码协助修复集成到编码、提交和打包过程中,可在.eslintrc的文件进行配置
+$ prettier                      代码风格支持
 $ babel-eslint                  es6代码检测
 vue必备开发依赖包
 
@@ -19,7 +20,6 @@ $ @vue/cli-plugin-eslint        代码规则配置
 $ @vue/eslint-config-prettier   代码风格
 $ eslint-plugin-prettier        代码风格检测和配置
 $ eslint-plugin-vue             修复检测出的报错
-$ prettier                      代码风格支持
 
 
 

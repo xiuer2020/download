@@ -1,8 +1,9 @@
 @grid-width: 30;
+@grid-xs: 510px + @grid-width;
 @grid-sm: 720px + @grid-width;
 @grid-md: 940px + @grid-width;
 @grid-lg: 1140px + @grid-width;
-/* @screen-xs: 480px; */
+@screen-xs: 576px;
 @screen-sm: 768px;
 @screen-md: 992px;
 @screen-lg: 1200px;
@@ -14,6 +15,9 @@
   padding-left: 15px;
   padding-right: 15px;
 
+  @media (min-width: @screen-xs) {
+    max-width: @grid-xs;
+  }
   @media (min-width: @screen-sm) {
     max-width: @grid-sm;
   }
@@ -33,21 +37,26 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {
   html {
     font-size: 125%;
   }
 }
-
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   html {
     font-size: 187.5%;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   html {
     font-size: 250%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 312.5%;
   }
 }
 // 响应式根字体大小

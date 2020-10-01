@@ -1,9 +1,13 @@
-/* @screen-xs: 480px; */
 .r-layout {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (min-width: 576px) {
+  .r-layout {
+    max-width: 540px;
+  }
 }
 @media (min-width: 768px) {
   .r-layout {
@@ -23,19 +27,24 @@
 html {
   font-size: 62.5%;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {
   html {
     font-size: 125%;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   html {
     font-size: 187.5%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   html {
     font-size: 250%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 312.5%;
   }
 }
 /*# sourceMappingURL=./media.css.map */

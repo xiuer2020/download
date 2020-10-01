@@ -1,5 +1,0 @@
-起步
-1 npm install jquery --save-dev 安装jquery支持
-2 npm install bootstrap --save-dev 安装bootstrap包
-3 npm install --save popper.js  Bootstrap 的dropdown插件是依赖popper.js
-4 在main.js添加 import 'bootstrap/dist/css/bootstrap.min.css'; import 'bootstrap/dist/js/bootstrap.min.js';

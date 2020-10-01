@@ -1,0 +1,29 @@
+@grid-width: 30;
+@grid-sm: 720px + @grid-width;
+@grid-md: 940px + @grid-width;
+@grid-lg: 1140px + @grid-width;
+/* @screen-xs: 480px; */
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+
+
+.r-layout {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: @screen-sm) {
+    width: @grid-sm;
+  }
+  @media (min-width: @screen-md) {
+    width: @grid-md;
+  }
+  @media (min-width: @screen-lg) {
+    width: @grid-lg;
+  }
+}
+
+
+

@@ -27,24 +27,39 @@
 html {
   font-size: 62.5%;
 }
+html body {
+  font-size: 12px;
+}
 @media only screen and (min-width: 576px) {
   html {
     font-size: 125%;
+  }
+  html body {
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 768px) {
   html {
     font-size: 187.5%;
   }
+  html body {
+    font-size: 16px;
+  }
 }
 @media only screen and (min-width: 992px) {
   html {
     font-size: 250%;
   }
+  html body {
+    font-size: 18px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 312.5%;
+  }
+  html body {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=./media.css.map */

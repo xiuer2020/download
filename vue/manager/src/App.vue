@@ -1,5 +1,5 @@
 <template>
-  <div id="app" @touchstart.stop="touchstart" @touchend.stop="touchend">
+  <div id="app">
     <router-view></router-view>
     <!-- 一级路由出口 -->
   </div>
@@ -7,7 +7,9 @@
 <script>
 
 export default {
-  
+  create(){
+    console.log(this.axios);
+  }
 };
 </script>
 <style lang="less">

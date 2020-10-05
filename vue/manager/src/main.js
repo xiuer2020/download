@@ -1,7 +1,10 @@
 import Vue from "vue";
 // 导入vue
 import "./plugins/axios";
-// 使用插件
+// 使用axios
+
+import "./plugins/registerComp";
+// 全局注册组件
 
 import router from "./router/index";
 // 引入路由实例

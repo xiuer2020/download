@@ -12,20 +12,10 @@ export default new Vuex.Store({
 
   },
   mutations: {
-    [types.UPDATE](state, payload) {
-      if (payload.name) {
-        state[payload.name][payload.key] = payload.value;
-      } else {
-        state[payload.key] = payload.value;
-      }
-    }
+   
   },
   actions: {
-    [types.UPDATE]({ commit }, n) {
-      commit(types.UPDATE, {
-        n
-      });
-    }
+    
   },
   modules
 });

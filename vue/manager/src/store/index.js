@@ -1,4 +1,3 @@
-import types from "./types";
 import modules from "./modules/modules";
 import Vuex from 'vuex';
 import Vue from 'vue';

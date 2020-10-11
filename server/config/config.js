@@ -1,11 +1,11 @@
 exports.databaseOptions = {
-  database: 'test',
+  database: 'demo',
   //数据库名称
 
   user: 'root',
   //数据库用户名
 
-  password: 'panzhifeng',
+  password: 'password',
   //数据库密码
 
   host: 'localhost',
@@ -43,7 +43,7 @@ exports.requestBodyOptions = {
 
 exports.serverOptions = {
   host: 'http://127.0.0.1',
-  port: 8002
+  port: 8003
 }
 //服务器配置
 

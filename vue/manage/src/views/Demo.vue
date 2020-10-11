@@ -14,6 +14,9 @@
         :placeholder="baseTypeTwoWayBindDemo"
       />
     </div>
+    <div class="valid-test" @click="validTest">
+      有效性测试
+    </div>
     <BaseMsg></BaseMsg>
   </div>
 </template>

@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize');
+const {Sequelize} = require('sequelize');
 //连接mysql数据， ORM层
 
 module.exports = new Sequelize(config.databaseOptions.database, config.databaseOptions.user, config.databaseOptions.password, {

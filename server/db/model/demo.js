@@ -11,7 +11,7 @@ Demo.init({
     type: DataTypes.INTEGER.UNSIGNED,
     //数据类型, INTEGER: 整型, UNSIGNED: 无符号
 
-    allowNull: false,
+    allowNull: true,
     //是否允许为null
 
     primaryKey: true,
@@ -75,7 +75,7 @@ Demo.init({
 
 
 Demo.sync({
-  force: true
+  force: false
 });
 //force: true, 如果存在该表，则先删除该表，再创建新表，否则直接创建新表
 //force: false, 如果存在该表，则不创建新表，否则创建新表

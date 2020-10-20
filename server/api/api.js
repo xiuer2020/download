@@ -35,6 +35,15 @@ class API {
     })
   }
   //查询数据 返回promiseu
+
+  count(modelName, condition) {
+    //modelName:  模型名称, string
+    //condition: 条件, object
+    return model[modelName].count({
+      where: condition
+    });
+  }
+  //查询数据表的记录数
 }
 // 数据的增删改方法
 

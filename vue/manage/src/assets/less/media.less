@@ -36,51 +36,29 @@
 
 
 html {
-  font-size: 62.5%;
+  font-size: 100px;
 
-  body {
+  body{
     font-size: 12px;
   }
-}
 
-@media only screen and (min-width: 576px) {
-  html {
-    font-size: 125%;
+  @media only screen and (min-width: @screen-xs) {
+    font-size: 154px;
+  }
 
-    body {
-      font-size: 14px;
-    }
+  @media only screen and (min-width: @screen-sm) {
+    font-size: 204px;
+  }
+
+  @media only screen and (min-width: @screen-md) {
+    font-size: 264px;
+  }
+
+  @media only screen and (min-width: @screen-lg) {
+    font-size: 320px;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  html {
-    font-size: 187.5%;
 
-    body {
-      font-size: 16px;
-    }
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  html {
-    font-size: 250%;
-
-    body {
-      font-size: 18px;
-    }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 312.5%;
-
-    body {
-      font-size: 20px;
-    }
-  }
-}
 
 // 响应式根字体大小

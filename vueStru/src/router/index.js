@@ -10,7 +10,13 @@ Vue.use(VueRouter);
 // 使用VueRouter
 
 const router = new VueRouter({
-  routes
+  routes: [{
+    path: '/Demo',
+    name: 'Demo',
+
+    //懒加载组件
+    component: r => require(['../views/Demo.vue'], r)
+  }]
 });
 // 路由实例
 

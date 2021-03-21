@@ -8,15 +8,15 @@ import VDistpicker from 'v-distpicker'
 Vue.component('v-distpicker', VDistpicker);
 
 # 使用方法
-<!-- <v-distpicker hide-area @selected="sel" :province='province' :city='myaddress'></v-distpicker> -->
+<v-distpicker hide-area @selected="sel" :province='province' :city='myaddress'></v-distpicker>
 
 #　属性介绍
 type=“mobile”
-# 是否在手机端加入 
+<!-- 是否在手机端加入  -->
 hide-area
-# 是否显示区县 
+<!-- 是否显示区县  -->
 :province=‘省’
-# 是否可反向绑定值 
+<!-- 是否可反向绑定值  -->
 selected
-# 选择时触发的事件
+<!-- 选择时触发的事件 -->
 

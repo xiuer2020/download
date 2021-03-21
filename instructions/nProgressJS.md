@@ -7,15 +7,6 @@ NProgress.start();
 NProgress.done();
 
 # 使用
-router.js
-import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
-
-router.beforeEach((to, from, next) => {
-  NProgress.start()
-  next()
-})
-
-router.afterEach(() => {
-  NProgress.done()
-})
+在router.js
+1)import NProgress from 'nprogress'
+2)import 'nprogress/nprogress.css'

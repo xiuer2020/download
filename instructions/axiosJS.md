@@ -9,13 +9,12 @@ $ bower install axios
 # API
 Axios.defaults.baseURL = String;
 <!-- 设置基础请求路径 -->
-
-
 Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 <!-- 设置post请求头 -->
-
 Axios.defaults.withCredentials = Boolean
 <!-- 携带cookie -->
+Axios.defaults.headers[name] = value;
+<!-- 携带数据 -->
 
 Axios.interceptors.request.use(params => {
   if (params.method == 'post') {
@@ -34,7 +33,6 @@ Axios.interceptors.request.use(params => {
 
 })
 <!-- 添加axios请求拦截器, 该方法在请求之前触发 -->
-
 Vue.prototype.axios = Axios;
 <!-- 插件封装 -->
 

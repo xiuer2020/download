@@ -1,57 +1,77 @@
-Installation
-npm
- 
+# 安装
 $ npm i vue-lazyload -S
  
-CDN
-CDN: https://unpkg.com/vue-lazyload/vue-lazyload.js
-
-<script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
-<script>
-  Vue.use(VueLazyload)
-  ...
-</script> 
- 
-Usage
-main.js:
-
- 
+# 使用
+https://unpkg.com/vue-lazyload/vue-lazyload.js
+<!-- CDN  -->
 import Vue from 'vue'
 import App from './App.vue'
-import VueLazyload from 'vue-lazyload'
- 
+import VueLazeload form 'vue-lazyload'
 Vue.use(VueLazyload)
- 
-// or with options
+<!-- es6 -->
+
+# 全局配置
 Vue.use(VueLazyload, {
   preLoad: 1.3,
+  <!-- 预加载 -->
   error: 'dist/error.png',
+  <!-- 错误显示 -->
   loading: 'dist/loading.gif',
-  attempt: 1
+  <!-- 加载显示 -->
+  attempt: 1,
+  <!-- 尝试 -->
+  'animationend', 'transitionend']
+  <!-- 动画 -->
+  listenEvents: [ 'scroll' ],
+  <!-- 监听器 -->
+
+  adapter: {
+      loaded ({ bindType, el, naturalHeight, naturalWidth, $parent, src, loading, error, Init }) {
+          // do something here
+          // example for call LoadedHandler
+          LoadedHandler(el)
+      },
+      loading (listender, Init) {
+          console.log('loading')
+      },
+      error (listender, Init) {
+          console.log('error')
+      }
+  },
+  filter: {
+    progressive (listener, options) {
+      const isCDN = /qiniudn.com/
+      if (isCDN.test(listener.src)) {
+          listener.el.setAttribute('lazy-progressive', 'true')
+          listener.loading = listener.src + '?imageView2/1/w/10/h/10'
+      }
+  },
+  webp (listener, options) {
+    if (!options.supportWebp) return
+    const isCDN = /qiniudn.com/
+    if (isCDN.test(listener.src)) {
+        listener.src += '?imageView2/2/format/webp'
+    }
+  },
+  observer: true,
+  
 })
- 
-new Vue({
-  el: 'body',
-  components: {
-    App
-  }
-})
-template:
 
 <ul>
   <li v-for="img in list">
     <img v-lazy="img.src" >
   </li>
 </ul>
-use v-lazy-container work with raw HTML
 
+
+# 使用v-lazy-container处理原始HTML
 <div v-lazy-container="{ selector: 'img' }">
   <img data-src="//domain.com/img1.jpg">
   <img data-src="//domain.com/img2.jpg">
   <img data-src="//domain.com/img3.jpg">  
 </div>
-custom error and loading placeholder image
 
+# 自定义错误和加载占位符图像
 <div v-lazy-container="{ selector: 'img', error: 'xxx.jpg', loading: 'xxx.jpg' }">
   <img data-src="//domain.com/img1.jpg">
   <img data-src="//domain.com/img2.jpg">
@@ -62,77 +82,15 @@ custom error and loading placeholder image
   <img data-src="//domain.com/img2.jpg" data-loading="xxx.jpg">
   <img data-src="//domain.com/img3.jpg">  
 </div>
-Constructor Options
-key	description	default	options
-preLoad	proportion of pre-loading height	1.3	Number
-error	src of the image upon load fail	'data-src'	String
-loading	src of the image while loading	'data-src'	String
-attempt	attempts count	3	Number
-listenEvents	events that you want vue listen for	['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend', 'touchmove']	Desired Listen Events
-adapter	dynamically modify the attribute of element	{ }	Element Adapter
-filter	the image's listener filter	{ }	Image listener filter
-lazyComponent	lazyload component	false	Lazy Component
-dispatchEvent	trigger the dom event	false	Boolean
-throttleWait	throttle wait	200	Number
-observer	use IntersectionObserver	false	Boolean
-observerOptions	IntersectionObserver options	{ rootMargin: '0px', threshold: 0.1 }	IntersectionObserver
-silent	do not print debug info	true	Boolean
-Desired Listen Events
-You can configure which events you want vue-lazyload by passing in an array of listener names.
 
-Vue.use(VueLazyload, {
-  preLoad: 1.3,
-  error: 'dist/error.png',
-  loading: 'dist/loading.gif',
-  attempt: 1,
-  // the default is ['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend']
-  listenEvents: [ 'scroll' ]
-})
-This is useful if you are having trouble with this plugin resetting itself to loading when you have certain animations and transitions taking place
 
-Image listener filter
-dynamically modify the src of image
 
-Vue.use(vueLazy, {
-    filter: {
-      progressive (listener, options) {
-          const isCDN = /qiniudn.com/
-          if (isCDN.test(listener.src)) {
-              listener.el.setAttribute('lazy-progressive', 'true')
-              listener.loading = listener.src + '?imageView2/1/w/10/h/10'
-          }
-      },
-      webp (listener, options) {
-          if (!options.supportWebp) return
-          const isCDN = /qiniudn.com/
-          if (isCDN.test(listener.src)) {
-              listener.src += '?imageView2/2/format/webp'
-          }
-      }
-    }
-})
-Element Adapter
-Vue.use(vueLazy, {
-    adapter: {
-        loaded ({ bindType, el, naturalHeight, naturalWidth, $parent, src, loading, error, Init }) {
-            // do something here
-            // example for call LoadedHandler
-            LoadedHandler(el)
-        },
-        loading (listender, Init) {
-            console.log('loading')
-        },
-        error (listender, Init) {
-            console.log('error')
-        }
-    }
-})
-IntersectionObserver
-use Intersection Observer to to improve performance of a large number of nodes.
+
+
 
 Vue.use(vueLazy, {
   // set observer to true
-  observer: true,
+  
  
   // optional
   observerOptions: {

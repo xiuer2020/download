@@ -1,7 +1,7 @@
 # 安装
 官网下载
 
-# 使用=
+# 使用
 路径：C:\Users\Administrator\.ssh下 配置主机名和地址
 1)git config --global user.name "Your Name"
 2)git config --global user.email "email@example.com"
@@ -68,9 +68,9 @@ git reflog
 <!-- 查看所有操作记录 -->
 git log --pretty=oneline            
 <!-- 命令查看版本记录(参数表示行内显示) -->
-git restore <file>...               
+git restore <file>... 
 <!-- 撤销工作区修改 用暂存区替换工作区 -->
-git restore --staged <file>...      
+git restore --staged <file>...
 <!-- 撤销暂存区修改 工作区不变 -->
 
 

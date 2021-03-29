@@ -1,0 +1,394 @@
+/* 通用样式 */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    font-size: 0;
+}
+/*清除浮动*/
+
+.base-flex {
+    display: flex;
+}
+
+.fxdc{
+    flex-direction: column;
+}
+.fxdcr{
+    flex-direction: column-reverse;
+}
+.fxdr{
+    flex-direction: row;
+}
+.fxdrr{
+    flex-direction: row-reverse;
+}
+.fxwn{
+    flex-wrap: nowrap;
+}
+.fxww{
+    flex-wrap: wrap;
+}
+.fxwwr{
+    flex-wrap: wrap-reverse;
+}
+.acc{
+    align-content: center;
+}
+.acfe{
+    align-content: flex-end;
+}
+.acfs{
+    align-content: flex-start;
+}
+.acs{
+    align-content: stretch;
+}
+.acsa{
+    align-content: space-around;
+}
+.acsb{
+    align-content: space-between;
+}
+
+.aic {
+    align-items: center;
+}
+
+.aife{
+    align-items: flex-end;
+}
+.aifs{
+    align-items: flex-start;
+}
+.ais{
+    align-items: stretch;
+}
+
+.asfe{
+    align-items: flex-end;
+}
+.asfs{
+    align-items: flex-start;
+}
+.ass{
+    align-items: stretch;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+.jcsa{
+    justify-content: space-around;
+}
+.jcc {
+    justify-content: center;
+}
+.jcfe{
+    justify-content: flex-end;
+}
+.jcfs{
+    justify-content: flex-start;
+}
+.fx1{
+    flex: 1;
+}
+.fx2{
+    flex: 2;
+}
+.fx3{
+    flex: 3;
+}
+
+order1{
+    order: 1;
+}
+.order2{
+    order: 2;
+}
+.order3{
+    order: 3;
+}
+/*弹性盒子布局*/
+
+
+/* 三临近色 */
+.c-p-deep {
+    color: #f58612;
+}
+
+.c-p-medium {
+    color: #fde7d0;
+}
+
+.c-p-light {
+    color: #fef3e7;
+}
+
+.c-s-deep {
+    color: #67c23a;
+}
+
+.c-s-medium {
+    color: #e1f3d8;
+}
+
+.c-s-light {
+    color: #f0f9eb;
+}
+
+.c-w-deep {
+    color: #e6a23c;
+}
+
+.c-w-medium {
+    color: #faecd8;
+}
+
+.c-w-light {
+    color: #fdf6ec;
+}
+
+.c-d-deep {
+    color: #f56c6c;
+}
+
+.c-d-medium {
+    color: #fde2e2;
+}
+
+.c-d-light {
+    color: #fef0f0;
+}
+
+.c-i-deep {
+    color: #909399;
+}
+
+.c-i-medium {
+    color: #e9e9eb;
+}
+
+.c-i-light {
+    color: #f4f4f5;
+}
+/*主题三色*/
+
+
+.c-black {
+    color: #000000;
+}
+
+.c-white {
+    color: #ffffff;
+}
+
+.c-bg-tranparent {
+    color: transparent;
+}
+/*基础背景三色*/
+
+.c-link-deep{
+    color: #ff8d00;
+}
+
+/* 四临近色  */
+.c-text-deep {
+    color: #130901;
+}
+
+.c-text-medium {
+    color: #333333;
+}
+
+.c-text-light {
+    color: #777777;
+}
+
+.c-text-lighter {
+    color: #c0c4cc;
+}
+
+.bdb-deep{
+    border: 1px solid #dcdfe6;
+}
+.bdb-medium{
+    border: 1px solid #e4e7ed;
+}
+.bdb-light{
+    border: 1px solid #ebeef5;
+}
+.bdb-lighter{
+    border: 1px solid #f2f6fc;
+}
+/*下边框*/
+
+
+.bdc-deep {
+    border-color: #dcdfe6;
+}
+
+.bdc-medium {
+    border-color: #e4e7ed;
+}
+
+.bdc-light {
+    border-color: #ebeef5;
+}
+
+.bdc-lighter {
+    border-color: #f2f6fc;
+}
+/*边框色*/
+
+.fz-smaller {
+    font-size: 12px;
+}
+
+.fz-small {
+    font-size: 14px;
+}
+
+.fz-medium {
+    font-size: 16px;
+}
+
+.fz-big {
+    font-size: 18px;
+}
+
+.fz-biger {
+    font-size: 20px
+}
+/*5个字号字体*/
+
+
+.fz-title-smaller {
+    font-size: 14px;
+}
+
+.fz-title-small {
+    font-size: 18px;
+}
+
+.fz-title-medium {
+    font-size: 22px;
+}
+
+.fz-title-big {
+    font-size: 32px;
+}
+
+.fz-title-biger {
+    font-size: 40px
+}
+/*5个字号标题字体*/
+
+.fw-medium {
+    font-weight: 600;
+}
+
+.fw-small {
+    font-weight: 300;
+}
+
+.lh1-5 {
+    line-height: 1.5;
+}
+.lh2{
+    line-height: 2;
+}
+
+.mtb-medium {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mtb-small{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+
+.ptb-medium {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.ptb-small{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.plr-medium {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.plr-small{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+.mt-big {
+    margin-top: 75px;
+}
+
+.mt-medium {
+    margin-top: 50px;
+}
+
+.mt-small {
+    margin-top: 24px;
+}
+
+
+.pt-big {
+    padding-top: 80px;
+}
+
+.pt-big-medium {
+    margin-top: 50px;
+}
+
+.mt-small {
+    margin-top: 24px;
+}
+
+
+
+.mb-smaller {
+    margin-bottom: 16px;
+}
+
+.pb-smaller {
+    padding: 8px;
+}
+
+
+.bgc-medim {
+    background-color: #f3f3f3;
+}
+.bgc-deep{
+    background-color: #fff;
+}
+.bgc-medium{
+    background-color: #fff;
+}
+.bgc-light{
+    background-color: #fff;
+}
+.bgc-lighter{
+    background-color: #fff;
+}
+
+.first-p{
+    padding-top: 0;
+}
+.first-m{
+    margin-top: 0;
+}

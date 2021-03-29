@@ -15,8 +15,8 @@ s
 
 
 # 多行文本超出省略号
-1)-webkit-line-clamp
-<!-- 用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。 -->
+1)-webkit-line-clamp 
+<!-- 用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。 设为vertical; -->
 2)display: -webkit-box; 
 <!-- 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。 -->
 3)-webkit-box-orient 

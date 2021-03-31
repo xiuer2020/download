@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/jquery.js"></script>
+</head>
+<body>
+    <div class="base-flex">
+        <div class="menu active">按钮 </div>
+        <div class="menu">按钮</div>
+        <div class="menu">按钮</div>
+        <div class="menu">按钮</div>
+        <div class="menu">按钮</div>
+        <div class="menu">按钮</div>
+        <div class="menu">按钮</div>
+        <div class="menu">按钮</div>
+    </div>
+    <div class="prod-tabs">
+        <div class="tab">1</div>
+        <div class="tab">2</div>
+        <div class="tab">3</div>
+        <div class="tab">4</div>
+    </div>
+    <!-- prod: productions产品 -->
+</body>
+</html>
+<script>
+const mens = $('.menu')
+mens.mousemove(function(e){
+    // console.log($(this).siblings);
+    $(this).addClass('active').siblings().removeClass('active')
+    console.log(e);
+})
+
+const pros = $('.pros')
+console.log(mens, pros);
+</script>

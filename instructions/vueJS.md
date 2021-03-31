@@ -28,7 +28,6 @@ npm install vue -S
 <!-- 使用动态参数 -->
 
 
-
 <Dom>slot</Dom>
 
 

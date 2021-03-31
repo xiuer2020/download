@@ -14,7 +14,10 @@
 .base-flex {
     display: flex;
 }
+/*弹性盒子布局*/
 
+
+/*主轴方向*/
 .fxdc{
     flex-direction: column;
 }
@@ -27,6 +30,8 @@
 .fxdrr{
     flex-direction: row-reverse;
 }
+
+/*容器内容是否换行*/
 .fxwn{
     flex-wrap: nowrap;
 }
@@ -36,6 +41,8 @@
 .fxwwr{
     flex-wrap: wrap-reverse;
 }
+
+/*单行/单列侧轴对齐方式*/
 .acc{
     align-content: center;
 }
@@ -55,6 +62,7 @@
     align-content: space-between;
 }
 
+/*多行/多列侧轴对齐方式*/
 .aic {
     align-items: center;
 }
@@ -79,6 +87,7 @@
     align-items: stretch;
 }
 
+/*主轴对齐方式*/
 .jcsb {
     justify-content: space-between;
 }
@@ -94,6 +103,8 @@
 .jcfs{
     justify-content: flex-start;
 }
+
+/*内容占比*/
 .fx1{
     flex: 1;
 }
@@ -104,7 +115,8 @@
     flex: 3;
 }
 
-order1{
+/*盒子次序*/
+.order1{
     order: 1;
 }
 .order2{
@@ -113,7 +125,6 @@ order1{
 .order3{
     order: 3;
 }
-/*弹性盒子布局*/
 
 
 /* 三临近色 */
@@ -176,9 +187,8 @@ order1{
 .c-i-light {
     color: #f4f4f5;
 }
-/*主题三色*/
 
-
+/*基础背景三色*/
 .c-black {
     color: #000000;
 }
@@ -190,11 +200,8 @@ order1{
 .c-bg-tranparent {
     color: transparent;
 }
-/*基础背景三色*/
 
-.c-link-deep{
-    color: #ff8d00;
-}
+
 
 /* 四临近色  */
 .c-text-deep {
@@ -213,21 +220,25 @@ order1{
     color: #c0c4cc;
 }
 
+/*下边框*/
 .bdb-deep{
-    border: 1px solid #dcdfe6;
+    border-bottom: 1px solid #dcdfe6;
 }
 .bdb-medium{
-    border: 1px solid #e4e7ed;
+    border-bottom: 1px solid #e4e7ed;
 }
 .bdb-light{
-    border: 1px solid #ebeef5;
+    border-bottom: 1px solid #ebeef5;
 }
 .bdb-lighter{
-    border: 1px solid #f2f6fc;
+    border-bottom: 1px solid #f2f6fc;
 }
-/*下边框*/
 
 
+/*边框色*/
+.bdc-p-deep{
+    border-color: black;
+}
 .bdc-deep {
     border-color: #dcdfe6;
 }
@@ -243,8 +254,9 @@ order1{
 .bdc-lighter {
     border-color: #f2f6fc;
 }
-/*边框色*/
 
+/*字体大小*/
+/*14, 16, 20, 22, 28,30, 52,*/
 .fz-smaller {
     font-size: 12px;
 }
@@ -264,9 +276,9 @@ order1{
 .fz-biger {
     font-size: 20px
 }
+
+
 /*5个字号字体*/
-
-
 .fz-title-smaller {
     font-size: 14px;
 }
@@ -288,6 +300,10 @@ order1{
 }
 /*5个字号标题字体*/
 
+/*间距*/
+/*12, 16, 18, 24, 26, 30, 34, 38, 40, 46, 50, 80, 104, 131, 198 共15*/
+/*可以应用space-between或space-around*/
+/*22, 26, 27, 31, 255, 共5*/
 .fw-medium {
     font-weight: 600;
 }
@@ -302,6 +318,9 @@ order1{
 .lh2{
     line-height: 2;
 }
+
+/*spacing*/
+
 
 .mtb-medium {
     margin-top: 50px;

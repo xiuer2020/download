@@ -22,14 +22,34 @@ make sure
 <!-- 确保 -->
 provide
 <!-- 提供 -->
-
-
-
-
-
-
-
-
+additional 
+额外的
+loader
+加载器
+Unexpected
+意外的
+token
+标记
+avoid
+避免
+reactive
+被动的
+properties
+属性
+instance 
+实例
+declare
+声明
+upfron
+预先的
+runtime 
+运行时
+range
+范围
+Maximum call stack 
+最大调用栈
+exceeded
+超出
 
 
 

@@ -28,7 +28,46 @@ Vue 3 项目，安装 Vant 3：
 [1]变量路径 '/es/style/var.less'
 
 # 组件的风格
-[1]键名为[大坨峰]命名, 例如Button, 组键名为[短横杠]命名
+[1]组件引入为[大坨峰]命名, 例如import {Button} from 'vant';
+[2]组件键名为[短横杠]命名, 例如<van-button></van-button>
+
+# 生词 
+[plain] 朴素的; [prefix] 前缀; [square] 方的; round 圆的; [hairline] 极细的;  [arrow] 箭头; [appear] 出现; [container] 容器; [inset] 插入; 
+
+# 内置样式使用
+[1]添加类名
+
+# 组件介绍模块结构
+[1]Props
+参数	说明	类型	默认值
+[2]Event
+事件名	说明	回调参数
+[3]样式变量
+名称	默认值	描述
+[4]插槽
+名称	说明
+[5]特定状态生效属性
+参数	说明	类型	默认值
+[6]组件实例方法
+方法名	说明	参数	返回值
+[7]属性的键列表
+键名	说明	类型
+[8]对象数组, 数组中的每一个对象键列表
+键名	说明	类型
+[9]回调参数, 执行时会传递以下回调参数列表
+参数名	说明	类型
+
+# 轻提示toast结构, Notify 消息提示, ImagePreview 图片预览, Lazyload 懒加载, 
+[1]方法
+方法名	说明	参数	返回值
+[2]对象参数列表
+参数	说明	类型	默认值
+[3]样式变量
+名称	默认值	描述
+
+# 技巧
+[1]imges组件
+[1-1]给组件添加 [类名] 并设置 [宽高]属性;
 
 # 基础组件
 [1]button按钮
@@ -158,52 +197,35 @@ setDefaultOptions属性：
 [1]Calendar 日历
 [1-1]属性Props
 [type] 选择类型; [single]表示选择单个日期; [multiple表示选择多个日期]; [range]表示选择日期区间; [title] 日历标题; [color] 主题色，对底部按钮和选中日期生效; [min-date] 最小日期 Date; [max-date] 最大日期; [default-date] 默认选中的日期，type 为 multiple 或 range 时为数组，传入 null 表示默认不选择; [row-height] 日期行高; [formatter] 日期格式化函数, 回调参数Day; [poppable] 以弹层的形式展示日历; [lazy-render] 只渲染可视区域的内容; [show-mark] 月份背景水印; [show-title] 日历标题; [show-subtitle] 日历副标题; [show-confirm] 确认按钮; [readonly] 只读状态，只读状态下不能选择日期; [confirm-text] 确认按钮的文字; 
-[confirm-disabled-text] 确认按钮处于禁用状态时的文字; 
-[first-day-of-week] v2.9.2 设置周起始日 0-6 0
-[Poppable] Props
-当 Canlendar 的 poppable 为 true 时，支持以下 props:
+[confirm-disabled-text] 禁用状态时的文字; [first-day-of-week] 周起始日; 
 
-参数 说明 类型 默认值
-v-model 显示日历弹窗 boolean false
-position 弹出位置，可选值为 top right left string bottom
-round 显示圆角弹窗 boolean true
-close-on-popstate 在页面回退时自动关闭 boolean true
-close-on-click-overlay 在点击遮罩层后关闭 boolean true
-safe-area-inset-bottom 开启底部安全区适配 boolean true
-get-container 指定挂载的节点，用法示例 string | () => Element -
-Range Props
-当 Canlendar 的 type 为 range 时，支持以下 props:
+[1-1-1]当 Canlendar 的 [poppable] 为 [true] 时，支持以下 [props]:
+[v-model]日历弹窗;
+[position] 弹出位置，可选值为 [top], [right], [left], [string], [bottom]
+[round] 圆角弹窗; [close-on-popstate] 在页面回退时自动关闭; [close-on-click-overlay] 在点击遮罩层后关闭; [safe-area-inset-bottom] 开启底部安全区适配; [get-container] 指定挂载的节点;
 
-参数 说明 类型 默认值
-max-range 日期区间最多可选天数 number | string 无限制
-range-prompt 范围选择超过最多可选天数时的提示文案 string 选择天数不能超过 xx 天
-allow-same-day v2.5.6 允许日期范围的起止时间为同一天 boolean false
-Multiple Props
-当 Canlendar 的 type 为 multiple 时，支持以下 props:
+[1-1-2]
+当 Canlendar 的 [type] 为 [range] 时，支持以下 props:
+[max-range] 日期区间最多可选天数; [range-prompt] 范围选择超过最多可选天数时的提示文案; [allow-same-day] 允许日期范围的起止时间为同一天;
 
-参数 说明 类型 默认值
-max-range v2.7.2 日期最多可选天数 number | string 无限制
-range-prompt 选择超过最多可选天数时的提示文案 string 选择天数不能超过 xx 天
-Day 数据结构
-日历中的每个日期都对应一个 Day 对象，通过formatter属性可以自定义 Day 对象的内容
+[1-1-3]
+当 Canlendar 的 [type] 为 [multiple] 时，支持以下 props:
+[max-range] 日期最多可选天数; [range-prompt] 选择超过最多可选天数时的提示文案 ;
 
-键名 说明 类型
-date 日期对应的 Date 对象 Date
-type 日期类型，可选值为selected、start、middle、end、disabled string
-text 中间显示的文字 string
-topInfo 上方的提示信息 string
-bottomInfo 下方的提示信息 string
-className 额外类名 string
-Events
-事件名 说明 回调参数
-select 点击并选中任意日期时触发 value: Date | Date[]
-confirm 日期选择完成后触发，若show-confirm为true，则点击确认按钮后触发 value: Date | Date[]
-open v2.5.2 打开弹出层时触发 -
-close v2.5.2 关闭弹出层时触发 -
-opened v2.5.2 打开弹出层且动画结束后触发 -
-closed v2.5.2 关闭弹出层且动画结束后触发 -
-unselect v2.7.2 当日历组件的 type 为 multiple 时，取消选中日期时触发 value: Date
-month-show v2.8.2 当某个月份进入可视区域时触发 { date: Date, title: string }
+[1-2]Day 数据结构
+日历中的每个日期都对应一个 Day 对象，通过[formatter]属性可以自定义 Day 对象的内容
+[date] 日期对应的 Date 对象;
+ [type] 日期类型，可选值为[selected]、[start]、[middle]、[end]、[disabled] [string]
+[text] 中间显示的文字; [topInfo] 上方的提示信息; [bottomInfo] 下方的提示信息; [className] 额外类名
+
+[1-3]Events
+[select] 点击并选中任意日期时触发 value: Date | Date; [confirm] 日期选择完成后触发，若show-confirm为true，则点击确认按钮后触发 value: Date | Date[]
+[open] v2.5.2 打开弹出层时触发 -
+[close] v2.5.2 关闭弹出层时触发 -
+[opened] v2.5.2 打开弹出层且动画结束后触发 -
+[closed] v2.5.2 关闭弹出层且动画结束后触发 -
+[unselect] v2.7.2 当日历组件的 type 为 multiple 时，取消选中日期时触发 value: Date
+[month]-show v2.8.2 当某个月份进入可视区域时触发 { date: Date, title: string }
 Slots
 名称 说明
 title 自定义标题
@@ -256,6 +278,31 @@ Vue.use(Lazyload, options);
 # 导航组件
 
 [1]NavBar 导航栏
+
+
+#　
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

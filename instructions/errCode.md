@@ -6,3 +6,4 @@
 [3-1]less-loader版本过高; 
 [3-2]npm uninstall [loader]
 [3-2]npm install [loader]@Number.x
+[4] Cannot find module 'postcss-easy-import'

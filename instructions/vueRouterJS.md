@@ -185,6 +185,8 @@ Options.scrollBehavior(to, from, savedPosition) => obj
 obj.behavior： String
 
 # 路由懒加载
+const Foo = () => import(/* webpackChunkName: "group-foo" */ './Foo.vue')
+组件按组分块
 
 # 把组件按组分块
 

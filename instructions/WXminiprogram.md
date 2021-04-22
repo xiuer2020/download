@@ -1,4 +1,8 @@
 
+# 起步
+JS-SDK 的模式并没有解决使用移动网页遇到的[体验不良]的问题, 设计了一个 [JS-SDK] 的[增强版本]
+网页开发者可以使用到各种浏览器暴露出来的 `DOM API`，进行 DOM [选中和操作]。而如上文所述，小程序的逻辑层和渲染层是分开的，逻辑层运行在 i 中，并没有一个完整浏览器对象，因而缺少相关的`DOM API`和`BOM API`。这一区别导致了前端开发非常熟悉的一些库，例如 `jQuery、 Zepto` 等，在小程序中是无法运行的
+
 # 组件模板
 [定义]<Dom><slot></slot>
 [使用]<component-tag-name>default slot </component-tag-name>

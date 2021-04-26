@@ -37,6 +37,7 @@ JS-SDK 的模式并没有解决使用移动网页遇到的[体验不良]的问�
 
 
 # 发布上线
+预览-> 上传代码 -> 提交审核 -> 发布
 
 
 # 运营数据
@@ -48,7 +49,8 @@ JS-SDK 的模式并没有解决使用移动网页遇到的[体验不良]的问�
 
 
 # 目录结构
-
+`app.json, app.wxss, app.js `
+`page.wxml, page.js, page.wxss, page.json`
 
 # 配置小程序
 
@@ -66,7 +68,7 @@ JS-SDK 的模式并没有解决使用移动网页遇到的[体验不良]的问�
 
 
 # 场景值
-
+https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html
 
 # 逻辑层
 
@@ -152,25 +154,44 @@ JS-SDK 的模式并没有解决使用移动网页遇到的[体验不良]的问�
 
 
 # WXML
+绑定: <Dom attr="{{data}}">{{data}}</Dom>
+<Dom wx:for="{{data}}"></Dom>
+<Dom wx:if="{{data}}"></Dom>
+<Dom wx:elif="{{data}}"></Dom>
+<Dom wx:else></Dom>
+page(Options)
+Options.data 定义
+Options.data.data: Object
 
+# 模板
+<template name="datas"><Dom>{{data}}</Dom></template>
 
 # WXSS
 
 
 # WXS
-
+注意项: https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/
+定义或引入: <wxs module="wxs" src="./test.wxs"></wxs>
+绑定: <Dom>{{wxs}}</Dom>
 
 # 事件系统
-
+事件是视图层到逻辑层的通讯方式。
+事件可以将用户的行为反馈到逻辑层进行处理。
+事件可以绑定在组件上，当达到触发事件，就会执行逻辑层中对应的事件处理函数。
+事件对象可以携带额外信息，如 id, dataset, touches
+绑定: <Dom bind:even></Dom>
+page(Options) 
+Options[even]定义
+或者
+Component(Options)
+Options.methods 定义
+Options.methods: Object
 
 # WXS 响应事件
 
 
 # 简易双向绑定
-
-
-# 基础组件
-
+绑定:<input model:value="{{data}}"></input>
 
 # 获取界面上的节点信息
 
@@ -278,6 +299,7 @@ JS-SDK 的模式并没有解决使用移动网页遇到的[体验不良]的问�
 
 
 # 网络
+服务器域名配置： `「小程序后台-开发-开发设置-服务器域名」`
 
 
 # 使用说明

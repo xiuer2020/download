@@ -12,6 +12,8 @@ IDE
 图片修改
 [7]MarkMan
 前端测量工具
+jsonView: https://www.cnblogs.com/whycxb/p/7126116.html
+
 
 
 

@@ -3553,33 +3553,4 @@ getApp()
  调用[页面指定方法]。
  
  
- # api
- wx.request({url,data,header,method,dataType,success,fail,complete})
-url: String
-data: Object | String
-header: Object
-method: Stirng
-dataType: String
-success: () => {}
-fail: () => {}
-complete: () => {}
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  

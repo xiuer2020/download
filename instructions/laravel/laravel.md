@@ -17,6 +17,11 @@ https://laravelacademy.org/post/21955
 [7]php composer.phar install
 [8]php artisan serve
 
+# 全局函数
+[1]配置composer.json的autoload
+[2]添加属性files, 值为 ["app/helpers.php"]
+[3]composer dump-autoload 将全局函数添加至自动加载器
+
 # 配置
 环境配置
 将`/.env.example`文件重命名为`.env`
@@ -28,7 +33,7 @@ https://laravelacademy.org/post/21955
 
 # 目录结构
 根目录: 应用目录， 启动目录，配置目录， 数据库目录， 对外公开目录， 资源目录， 路由目录， 文件存储目录， 测试目录， vendor目录
-应用目录： Broadcasting 目录， Console 目录， Events 目录， Exceptions 目录， Http 目录， Jobs目录， Listeners 目录， Mail 目录， Models 目录， Policies 目录， Providers 目录，Rules 目录
+应用目录： Broadcasting 目录， Console 目录， Events 目录， Exceptions 目录， Http 目录， Jobs目录， Listeners 目录， Mail 目录， Models 目录， Policies 目录， Providers 服务提供者目录，Rules 目录
 
 入门套件 laravel breeze
 [1]命令`php composer.phar require laravel/breeze --dev`进行安装

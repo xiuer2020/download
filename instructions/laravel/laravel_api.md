@@ -1,9 +1,11 @@
 # 入门
 
+
 # App\Models
 
 
-# \Illuminate\Database\Eloquent\Factories\Factory
+# Illuminate\Database\Eloquent\Factories\Factory
+`::访问`
 times(Number)
 resolveFactoryName
 factoryForModel
@@ -15,6 +17,7 @@ new
 userNamespace
 
 # Illuminate\Support\Facades\Hash
+`::访问`
 resolved
 clearResolvuedInstance
 clearResolvedInstances
@@ -31,6 +34,7 @@ spy
 swap
 
 # Illuminate\Support\Str
+`::访问`
 after
 afterLast
 ascii
@@ -85,6 +89,7 @@ wordCount
 words
 
 # Illuminate\Support\Facades\DB
+`::访问`
 clearResolvedInstance
 clearResolvedInstances
 affectingStatement
@@ -124,7 +129,19 @@ sholdReceive
 spy
 swap
 
-# Illuminate\Http\Request | Request
+# Illuminate\Routing\Router
+`::访问`
+redirect
+resource(string $name, string $controller, array $options = [])
+添加路由
+resources
+resourceVerbs
+respondWithRoute
+resourceParameters
+
+
+# Illuminate\Http\Request
+`::访问`
 capture
 create
 createFrom
@@ -161,15 +178,94 @@ mixin
 normalizeQuerySting
 setFactory
 setTrustedHosts
+`->访问`
+allFiles
+anyFilled
+attributes
+bearerToken
+boolean
+cookie
+cookies
+dump
+duplicate
+except
+file
+files
+filled
+fingerprint
+flash
+flashExcept
+flashOnly
+flush
+format
+fullUrl
+fullUrlIs
+fullUrlWithQuery
+getAcceptableContentTypes
+getBasePath
+getBaseUrl
+getCharsets
+getClientIp
+getClientIps
+getContent
+getContentType
+getDefaultLocale
+getEncodings
+getETages
+getFormat
+getHost
+getHttpHost
+getLanguages
+getLocale
+getMethod
+getMimeType
+getPassword
+getPathInfo
+getPort
+getPreferredFormat
+getRequestFormat
+getRequestUri
+getRouteResolver
+getScheme
+getSchemeAndHttpHost
+getScriptName
+getSession
+getUri
+getUriForPath
+getUser
+getUserInfo
+getUserResolver
+hasAny
+hasCookie
+hasFile
+hasHeader
+hasPreviousSession
+hasSession
+header
+headers
+initialize
+instance
+ip
+ips
+is
+isFromTrustedProxy
+isJson
+isMethod
+input(param)
+获取某个参数
+
+
+
 
 # \App\Models\模型名
+`::访问`
 query
 $encrypter
 $manyMethod
 $snakeAttributes
 addGlobalScope
 all()
-获取所有数据
+获取所有参数数据
 cacheMutateAttributes
 clearBootedModels
 created
@@ -210,6 +306,7 @@ withoutTouching
 withoutTouchingOn
 
 # # \App\Models\模型名的额外约束
+`::访问`
 where('字段名称', '字段值')
 字段对应关系
 where([['字段1名称', '字段1值'],['字段1名称', '字段1值']])
@@ -223,11 +320,23 @@ get()
 
 
 # Closure
+`::访问`
 bind
 fromCallable
 
+# Illuminate\Support\Facades\Crypt
+`::调用`
+encryptString(string $value)=>string
+加密字符串
+decryptString(string $value)=>string
+加密字符串
 
 
+# Illuminate\Support\Facades\Route
+`->调用`
+middleware
 
 # 数据库测试
 模型::factory()->times(Number)->create();
+
+# 在继承Model类的类

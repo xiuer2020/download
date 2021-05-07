@@ -9,6 +9,8 @@ php composer.phar create-project laravel/laravel example-app
 通过composer安装laravel项目
 php composer.phar install
 安装composer依赖
+php artisan migrate
+数据迁移
 php artisan serve
 运行laravel项目服务器
 
@@ -22,15 +24,25 @@ php artisan serve
 [4]npm run dev
 编译前端资源
 
+# 加密
+php artisan key:generate
+生成.env文件下的APP_KEY属性
 
 # 模型
 php artisan make:model 模型名称
 创建模型
 
+# 控制器
+php artisan make:controller 控制器名
+创建控制器
 
 # 中间件
 php artisan make:middleware CheckAge
 创建中间件
+
+# 迁移
+php artisan migrate
+运行迁移文件
 
 
 # 测试系列

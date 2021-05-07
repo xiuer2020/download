@@ -3222,7 +3222,65 @@ Exparser是微信小程序的组件组织框架，内置在小程序基础库中
 开发者工具上显示的调试器是调试逻辑层WebView，主要使用Chrome Devtools的Sources面板调试逻辑层JS代码
 
 
+小程序配置
+全局配置
+页面配置
+sitemap 配置
+场景值
+框架接口
+小程序 App
+App
+getApp
+页面
+Page
+getCurrentPages
+自定义组件
+Component
+Behavior
+模块化
+require
+module
+exports
+requirePlugin
+requireMiniProgram
+基础功能
+wx
+wx.env
+console
+console.debug
+console.error
+console.group
+console.groupEnd
+console.info
+console.log
+console.warn
+定时器
+setTimeout
+clearTimeout
+setInterval
+clearInterval
+WXML 语法参考
+数据绑定
 
+# 列表渲染
+wx:for="{{data}}"
+绑定数据
+wx:for-index="index"
+指定index标识符
+wx:for-item="item"
+指定item的标识符
+
+条件渲染
+模板
+引用
+WXS 语法参考
+模块
+变量
+注释
+运算符
+语句
+数据类型
+基础类库
 
 
 

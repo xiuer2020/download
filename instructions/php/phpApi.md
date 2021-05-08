@@ -9,6 +9,14 @@
 5)函数的函数表达式创建
 6)reuturn 标识符
 
+# "::"、"->"和"=>"的区别
+"::" 运算法
+该运算符是调用一个类中的静态成员的方法
+"->"运算符
+该操作符是操作一个类中的成员变量的方法，可以是非static成员变量
+"=>"运算符
+该预算付是数组的key和value映射时使用的运算符
+
 # api
 bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )
 <!-- 设置常量 -->

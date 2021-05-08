@@ -18,7 +18,8 @@ UpdateManager.onCheckForUpdate
 UpdateManager.onUpdateFailed
 UpdateManager.onUpdateReady
 小程序
-生命周期
+
+# 生命周期
 wx.getLaunchOptionsSync
 wx.getEnterOptionsSync
 应用级事件
@@ -38,7 +39,8 @@ wx.offAudioInterruptionEnd
 wx.offAudioInterruptionBegin
 wx.offAppShow
 wx.offAppHide
-调试
+
+# 调试
 wx.setEnableDebug
 wx.getRealtimeLogManager
 wx.getLogManager
@@ -69,14 +71,18 @@ RealtimeTagLogManager.info
 RealtimeTagLogManager.setFilterMsg
 RealtimeTagLogManager.warn
 RealtimeTagLogManager.addFilterMsg
-定时器
+
+# 定时器
 clearInterval
 clearTimeout
 setInterval
 setTimeout
-环境变量
+
+# 环境变量
 env
-路由
+
+
+# 路由
 wx.switchTab
 wx.reLaunch
 wx.redirectTo
@@ -87,7 +93,8 @@ EventChannel.emit
 EventChannel.off
 EventChannel.on
 EventChannel.once
-界面
+
+# 界面
 交互
 wx.showToast(Object object)
 显示消息提示框
@@ -99,13 +106,15 @@ wx.hideToast
 wx.hideLoading
 wx.enableAlertBeforeUnload
 wx.disableAlertBeforeUnload
-导航栏
+
+# 导航栏
 wx.showNavigationBarLoading
 wx.setNavigationBarTitle
 wx.setNavigationBarColor
 wx.hideNavigationBarLoading
 wx.hideHomeButton
-背景
+
+# 背景
 wx.setBackgroundTextStyle
 wx.setBackgroundColor
 Tab Bar
@@ -117,17 +126,21 @@ wx.setTabBarBadge
 wx.removeTabBarBadge
 wx.hideTabBarRedDot
 wx.hideTabBar
-字体
+
+# 字体
 wx.loadFontFace
-下拉刷新
+
+# 下拉刷新
 wx.stopPullDownRefresh
 wx.startPullDownRefresh
-滚动
+
+# 滚动
 wx.pageScrollTo
 ScrollViewContext
 ScrollViewContext.scrollIntoView
 ScrollViewContext.scrollTo
-动画
+
+# 动画
 wx.createAnimation
 Animation
 Animation.matrix
@@ -160,17 +173,22 @@ Animation.export
 Animation.backgroundColor
 Animation.height
 Animation.left
-置顶
+
+# 置顶
 wx.setTopBarText
-自定义组件
+
+# 自定义组件
 wx.nextTick
-菜单
+
+# 菜单
 wx.getMenuButtonBoundingClientRect
-窗口
+
+# 窗口
 wx.setWindowSize
 wx.onWindowResize
 wx.offWindowResize
-键盘
+
+# 键盘
 wx.onKeyboardHeightChange
 wx.offKeyboardHeightChange
 wx.hideKeyboard
@@ -195,7 +213,8 @@ DownloadTask.offHeadersReceived
 DownloadTask.offProgressUpdate
 DownloadTask.onHeadersReceived
 DownloadTask.onProgressUpdate
-上传
+# 上传
+
 wx.uploadFile
 UploadTask
 UploadTask.abort
@@ -229,7 +248,8 @@ wx.offLocalServiceResolveFail
 wx.offLocalServiceLost
 wx.offLocalServiceFound
 wx.offLocalServiceDiscoveryStop
-UDP 通信
+# UDP 通信
+
 wx.createUDPSocket
 UDPSocket
 UDPSocket.bind
@@ -269,7 +289,8 @@ wx.setBackgroundFetchToken
 wx.onBackgroundFetchData
 wx.getBackgroundFetchToken
 wx.getBackgroundFetchData
-媒体
+# 媒体
+
 地图
 wx.createMapContext
 MapContext
@@ -296,7 +317,8 @@ MapContext.setLocMarkerIcon
 MapContext.toScreenLocation
 MapContext.translateMarker
 MapContext.updateGroundOverlay
-图片
+# 图片
+
 wx.saveImageToPhotosAlbum
 wx.previewMedia
 wx.previewImage
@@ -304,7 +326,8 @@ wx.getImageInfo
 wx.compressImage
 wx.chooseMessageFile
 wx.chooseImage
-视频
+# 视频
+
 wx.saveVideoToPhotosAlbum
 wx.openVideoEditor
 wx.getVideoInfo
@@ -326,7 +349,8 @@ VideoContext.seek
 VideoContext.sendDanmu
 VideoContext.showStatusBar
 VideoContext.stop
-音频
+# 音频
+
 wx.stopVoice
 wx.setInnerAudioOption
 wx.playVoice
@@ -372,7 +396,8 @@ AudioContext.pause
 AudioContext.play
 AudioContext.seek
 AudioContext.setSrc
-背景音频
+# 背景音频
+
 wx.stopBackgroundAudio
 wx.seekBackgroundAudio
 wx.playBackgroundAudio
@@ -399,7 +424,8 @@ BackgroundAudioManager.pause
 BackgroundAudioManager.play
 BackgroundAudioManager.seek
 BackgroundAudioManager.stop
-实时音视频
+# 实时音视频
+
 wx.createLivePusherContext
 wx.createLivePlayerContext
 LivePlayerContext
@@ -430,7 +456,8 @@ LivePusherContext.stopBGM
 LivePusherContext.stopPreview
 LivePusherContext.switchCamera
 LivePusherContext.toggleTorch
-录音
+# 录音
+
 wx.stopRecord
 wx.startRecord
 wx.getRecorderManager
@@ -447,7 +474,8 @@ RecorderManager.pause
 RecorderManager.resume
 RecorderManager.start
 RecorderManager.stop
-相机
+# 相机
+
 wx.createCameraContext
 CameraContext
 CameraContext.setZoom
@@ -458,7 +486,8 @@ CameraContext.onCameraFrame
 CameraFrameListener
 CameraFrameListener.start
 CameraFrameListener.stop
-富文本
+# 富文本
+
 EditorContext
 EditorContext.blur
 EditorContext.clear
@@ -473,7 +502,8 @@ EditorContext.removeFormat
 EditorContext.scrollIntoView
 EditorContext.setContents
 EditorContext.undo
-音视频合成
+# 音视频合成
+
 wx.createMediaContainer
 MediaContainer
 MediaContainer.addTrack
@@ -482,7 +512,8 @@ MediaContainer.export
 MediaContainer.extractDataSource
 MediaContainer.removeTrack
 MediaTrack
-实时语音
+# 实时语音
+
 wx.updateVoIPChatMuteConfig
 wx.subscribeVoIPVideoMembers
 wx.onVoIPVideoMembersChanged
@@ -494,7 +525,8 @@ wx.offVoIPChatMembersChanged
 wx.offVoIPChatInterrupted
 wx.joinVoIPChat
 wx.exitVoIPChat
-画面录制器
+# 画面录制器
+
 wx.createMediaRecorder
 MediaRecorder
 MediaRecorder.destroy
@@ -505,7 +537,8 @@ MediaRecorder.requestFrame
 MediaRecorder.resume
 MediaRecorder.start
 MediaRecorder.stop
-视频解码器
+# 视频解码器
+
 wx.createVideoDecoder
 VideoDecoder
 VideoDecoder.getFrameData
@@ -515,7 +548,8 @@ VideoDecoder.remove
 VideoDecoder.seek
 VideoDecoder.start
 VideoDecoder.stop
-位置
+# 位置
+
 wx.stopLocationUpdate
 wx.startLocationUpdateBackground
 wx.startLocationUpdate
@@ -525,7 +559,8 @@ wx.offLocationChange
 wx.getLocation
 wx.choosePoi
 wx.chooseLocation
-转发
+# 转发
+
 wx.updateShareMenu
 wx.showShareMenu
 wx.showShareImageMenu
@@ -536,7 +571,8 @@ wx.offCopyUrl
 wx.hideShareMenu
 wx.getShareInfo
 wx.authPrivateMessage
-画布
+# 画布
+
 wx.createOffscreenCanvas
 wx.createCanvasContext
 wx.canvasToTempFilePath
@@ -603,7 +639,8 @@ OffscreenCanvas.createImage
 OffscreenCanvas.getContext
 Path2D
 RenderingContext
-文件
+# 文件
+
 wx.saveFileToDisk
 wx.saveFile
 wx.removeSavedFile
@@ -661,7 +698,8 @@ Stats.isDirectory
 Stats.isFile
 writeResult
 
-开放接口
+# 开放接口
+
 登录
 wx.login({timeout, success, fail, complete}) 
 success: res => {code}

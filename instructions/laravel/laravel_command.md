@@ -37,13 +37,16 @@ php artisan make:controller 控制器名
 创建控制器
 
 # 中间件
-php artisan make:middleware CheckAge
+php artisan make:middleware 中间件名称
 创建中间件
 
 # 迁移
 php artisan migrate
 运行迁移文件
 
+# 安全系列
+php artisan key:generate
+在配置文件 config/app.php 中生成 key 选项为 32 位随机字符串
 
 # 测试系列
 php artisan make:model 模型名称

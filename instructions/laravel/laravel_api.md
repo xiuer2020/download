@@ -333,8 +333,37 @@ decryptString(string $value)=>string
 
 
 # Illuminate\Support\Facades\Route
+`::调用`
+spy
+$app
+swap
+isMock
+resolved
+createMock
+partialMock
+_callStatic
+getFacadeRoot
+shouldReceive
+getMockableClass
+$resolvedInstance
+getFacadeAccessor
+getFacadeApplication
+setFacadeApplication
+clearResolvedInstance
+resolveFacadeInstance
+clearResolvedInstances
+createFreshMockInstance
 `->调用`
 middleware
+
+# Illuminate\Support\Facades\Route之路由对象, 访问get,post,put,patch,delete,options静态方法后返回的对象
+`::调用`
+
+`->调用`
+middleware('中间件名')
+绑定中间件
+
+
 
 # 数据库测试
 模型::factory()->times(Number)->create();

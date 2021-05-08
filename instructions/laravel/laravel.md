@@ -147,19 +147,19 @@ $action = Route::currentRouteAction();
 表单方法伪造
 
 # 中间件
-定义中间件通过 Artisan 命令`php artisan make:middleware` 中间件名 [--invokable] 参数--invokable表示是否为单一控制器
 在 app/Http/Middleware 目录生成文件
-
 请求之前/之后的中间件：区别是`中间件逻辑位于 $next($request) 语句之前还是之后`
 
 注册中间件
+
+
 全局中间件
 在 app/Http/kernel.php 的数组属性 $middleware 中即可：
 
 
 分配中间件到指定路由
-定义：在 app/Http/Kernel.php 文件中分配给该中间件一个 key
-分配: 在`路由定义中`routeChain->middleware('key1', 'key2', ...)
+在 app/Http/Kernel.php 文件中分配给该中间件一个 key
+
 
 阻止中间件被应用到群组中的单个路由: https://laravelacademy.org/post/21971
 

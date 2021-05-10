@@ -1,0 +1,3 @@
+encryptor机密机
+instance实例
+decrypt解密

@@ -1,8 +1,15 @@
-# 入门
+# 继承Illuminate\Database\Eloquent\Model的类
+`::访问`
+select('fieldName1', 'fieldName2',...) => queryBuilderInstance
+筛选返回查询构建器实例
+`->访问`
+with('tableName') => queryBuilderInstance
+关联的表
+`类内部访问`
+$this->belongsTo('tableName') => queryBuilderInstance
+返回关联的表查询构建器实例
 
-
-# App\Models
-
+# 
 
 # Illuminate\Database\Eloquent\Factories\Factory
 `::访问`
@@ -116,11 +123,12 @@ select
 selectOne
 setDefaultConnection
 statement
-table
+table('tableName')
+给定表返回一个流式查询构建器实例
 transaction
 transactionLevel
 unprepared
-update(['字段名称' => '字段值'])
+update(['fieldName称' => 'fieldValue'])
 更新数据
 getFacaRoot
 partialMock
@@ -128,6 +136,42 @@ setFacadeApplication
 sholdReceive
 spy
 swap
+
+# Query builder instance查询构建器实例中
+`::访问`
+
+
+`->访问`
+where('fieldName', 'fieldValue') => queryBuilderInstance
+筛选约束
+where([['fieldName1', fieldValue1, ['fieldName2', fieldValue2]]]) => queryBuilderInstance
+筛选约束
+orderBy('fieldName') => queryBuilderInstance
+value('fieldName') => value
+方法从结果中获取单个fieldValue
+find('idfieldValue') => record
+通过 id fieldName来获取单条记录
+pluck('fieldName') => fieldValueArray
+获取包含单个fieldValue的数组
+get() => recordArray
+获取表中所有记录
+count() => number
+获取表中所有记录数
+max('fieldName') => value
+获取最大的字段值
+min('fieldName') => value
+获取最小的字段值
+avg('fieldName') => value
+获取字段的平均值
+sum('field') => value
+获取字段的总和值
+select('fieleName1', 'fieldName2 as alias') => queryBuilderInstance
+筛选字段及设置字段别名
+distinct() => queryBuilderInstance
+方法允许你强制查询返回不重复的结果集
+DB::raw()
+创建一个原生表达式
+
 
 # Illuminate\Routing\Router
 `::访问`
@@ -307,12 +351,12 @@ withoutTouchingOn
 
 # # \App\Models\模型名的额外约束
 `::访问`
-where('字段名称', '字段值')
-字段对应关系
-where([['字段1名称', '字段1值'],['字段1名称', '字段1值']])
-多字段对应关系
-orderBy('字段名称', 'desc')
-通过某字段排序
+where('fieldName称', 'fieldValue')
+fieldName对应关系
+where([['fieldName1名称', 'fieldName1值'],['fieldName1名称', 'fieldName1值']])
+多fieldName对应关系
+orderBy('fieldName称', 'desc')
+通过某fieldName排序
 take(Number)
 获取数量
 get()

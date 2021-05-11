@@ -1,3 +1,4 @@
+# EasyWeChat\Factory
 $app = Factory::officialAccount($config) => appInstance
 // 公众号
 $app = Factory::miniProgram($config) => appInstance
@@ -10,3 +11,5 @@ $app = Factory::openWork($config) => appInstance
 // 企业微信开放平台
 $app = Factory::payment($config) => appInstance
 // 微信支付
+
+# EasyWeChat\Factory创建的appInstance

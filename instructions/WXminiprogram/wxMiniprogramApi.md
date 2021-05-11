@@ -96,15 +96,22 @@ EventChannel.once
 
 # 界面
 交互
-wx.showToast(Object object)
+wx.showToast({title[, icon, image, duration, mask, success, fail, complete]})
 显示消息提示框
 object: {title, icon, image, duration, mask, success, fail, complete}
-wx.showModal
-wx.showLoading
-wx.showActionSheet
+wx.showModal([{title, content, showCancel, cancelText, cancelColor, confirmText, confirmColor, success, fail, complete}])
+iconLegalValue: ['succes', 'error', 'loading', 'none']
+显示模态对话框 
+wx.showLoading({title[, mask, success, fail, complete]})
+显示 loading 提示框
+wx.showActionSheet({itemList[, alerText,  itemColor, success, fail, complete]})
+successCallBackArgumentsValue: {tapIndex}
+显示操作菜单
 wx.hideToast
-wx.hideLoading
-wx.enableAlertBeforeUnload
+wx.hideLoading()
+关闭 loading 提示框
+wx.enableAlertBeforeUnload({message[, success, fail, complete]})
+开启小程序页面返回询问对话框
 wx.disableAlertBeforeUnload
 
 # 导航栏
@@ -270,7 +277,7 @@ UDPSocket.write
 wx.setStorageSync(Object object)
 设置同步数据缓存
 object: {key, data, success, fail, complete}
-wx.setStorage(Object object)
+wx.setStorage({key, data[, success[, fail[, complete]]]})
 设置数据缓存
 object: {key, data, success, fail, complete}
 wx.removeStorageSync
@@ -279,7 +286,7 @@ wx.getStorageSync(string key)
 同步版获取缓存
 wx.getStorageInfoSync
 wx.getStorageInfo
-wx.getStorage(Object object)
+wx.getStorage({key, success, fail, complete})
 获取缓存
 object: {key, success, fail, complete}
 wx.clearStorageSync
@@ -723,14 +730,25 @@ wx.reportAnalytics
 支付
 wx.requestPayment
 wx.requestOrderPayment
-授权
-wx.authorizeForMiniProgram
-wx.authorize
+
+# 授权
+wx.authorizeForMiniProgram({scope, success, fail, complete})
+scopeLegalValue: ['scope.userInfo', 'scope.userLocation', 'scope.userLocationBackground', 'scope.address', 'scope.invoiceTitle', 'scope.invoice', 'scope.werun', 'scope.record', 'scope.writePhotosAlbum', 'scope.camera' ]
+获取授权
+wx.authorize({scope, success, fail, complete})
+scopeLegalValue: ['scope.userInfo', 'scope.userLocation', 'scope.userLocationBackground', 'scope.address', 'scope.invoiceTitle', 'scope.invoice', 'scope.werun', 'scope.record', 'scope.writePhotosAlbum', 'scope.camera' ]
+提前向用户发起授权请求
+
 设置
-wx.openSetting
-wx.getSetting
+wx.openSetting({withSubscriptions, success, fail, complete})
+调起客户端小程序设置界面，返回用户设置的操作结果
+wx.getSetting({withSubscriptions, success, fail, complete})
+获取用户的当前设置
 AuthSetting
+用户授权设置信息
 SubscriptionsSetting
+订阅消息设置
+
 收货地址
 wx.chooseAddress
 卡券

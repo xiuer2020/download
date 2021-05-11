@@ -183,7 +183,6 @@ resourceVerbs
 respondWithRoute
 resourceParameters
 
-
 # Illuminate\Http\Request
 `::访问`
 capture
@@ -301,7 +300,7 @@ input(param)
 
 
 
-# \App\Models\模型名
+# \App\Models\modelName
 `::访问`
 query
 $encrypter
@@ -378,6 +377,10 @@ decryptString(string $value)=>string
 
 # Illuminate\Support\Facades\Route
 `::调用`
+get('url', [controller::class, 'method'])
+get请求
+post('url', [controller::class, 'method'])
+post请求
 spy
 $app
 swap
@@ -397,8 +400,6 @@ clearResolvedInstance
 resolveFacadeInstance
 clearResolvedInstances
 createFreshMockInstance
-`->调用`
-middleware
 
 # Illuminate\Support\Facades\Route之路由对象, 访问get,post,put,patch,delete,options静态方法后返回的对象
 `::调用`

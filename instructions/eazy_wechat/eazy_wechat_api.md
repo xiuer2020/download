@@ -13,3 +13,9 @@ $app = Factory::payment($config) => appInstance
 // 微信支付
 
 # EasyWeChat\Factory创建的appInstance
+`通过->访问`
+auth->session($code)
+获取openid和session_key
+encryptor->decryptData($session_key, $iv, $encryptedData)
+解析加密数据
+

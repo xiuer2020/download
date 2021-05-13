@@ -158,7 +158,8 @@ $action = Route::currentRouteAction();
 
 
 分配中间件到指定路由
-在 app/Http/Kernel.php 文件中分配给该中间件一个 key
+[1]在 app/Http/Kernel.php 文件中分配给该中间件一个 key
+[2]
 
 
 阻止中间件被应用到群组中的单个路由: https://laravelacademy.org/post/21971

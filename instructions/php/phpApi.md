@@ -57,4 +57,8 @@ rand(min, max)
 函数返回随机整数
 time() 
 函数获取当前时间戳
+isset($var)
+检测变量是否已设置并且非 NUL
+compact('var1', 'var2'...) 
+函数创建一个包含变量名和它们的值的数组
 

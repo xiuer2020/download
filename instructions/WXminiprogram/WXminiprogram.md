@@ -55,7 +55,19 @@ JS-SDK 的模式并没有解决使用移动网页遇到的[体验不良]的问�
 # 配置小程序
 
 
-# 全局配置
+# 全局配置 app.json
+https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window
+{entryPagePath,pages,window,tabBar,networkTimeout,debug,functionalPages,subpackages,workers,requiredBackgroundModes,plugins,preloadRule,resizable,usingComponents,permission,sitemapLocation,style,useExtendedLib,entranceDeclare,darkmode,themeLocation,lazyCodeLoading,singlePage}
+entryPagePath: string
+pages: stringArray
+window: {navigationBarBackgroundColor, navigationBarTextStyle, navigationBarTitleText, navigationStyle, default, custom, backgroundColor, backgroundTextStyle, backgroundColorTop, backgroundColorBottom, enablePullDownRefresh, Page.onPullDownRefresh onReachBottomDistance, Page.onReachBottom	, pageOrientation} 
+
+tabBar: {color, selectedColor, backgroundColor, borderStyle, list, position, custom} list: {pagePath, text, iconPath, selectedIconPath}
+usingComponents: {"componentName": "componentPath"}
+
+
+
+
 
 
 # 页面配置

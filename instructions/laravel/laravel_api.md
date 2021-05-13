@@ -1,4 +1,4 @@
-# 继承Illuminate\Database\Eloquent\Model的类
+# Illuminate\Database\Eloquent\Model
 `::访问`
 select('fieldName1', 'fieldName2',...) => queryBuilderInstance
 筛选返回查询构建器实例
@@ -14,115 +14,15 @@ $this->belongsTo('tableName') => queryBuilderInstance
 # Illuminate\Database\Eloquent\Factories\Factory
 `::访问`
 times(Number)
-resolveFactoryName
-factoryForModel
-guessFactoryNameUsing
-hasMacro
-macro
-mixin
-new
-userNamespace
+
 
 # Illuminate\Support\Facades\Hash
 `::访问`
-resolved
-clearResolvuedInstance
-clearResolvedInstances
-check
-info
-make
-needsRehash
-getFacadeApplication
-getFacadeRoot
-partialMock
-setFacadeApplication
-shouldReceilve
-spy
-swap
+
 
 # Illuminate\Support\Str
 `::访问`
-after
-afterLast
-ascii
-before
-beforeLast
-between
-camel
-contains
-containsAll
-createUuidsNormally
-createUuidsUsing
-endsWith
-finish
-hasMacro
-is
-isAscii
-isUuid
-kebab
-length
-limit
-lower
-macro
-markdown
-mixin
-of
-orderedUuid
-padBoth
-padLeft
-padRight
-parseCallBack
-plural
-pluralStudly
-random
-remove
-repeat
-replaceArray
-replaceFirst
-replaceLast
-singular
-slug
-snake
-start
-startsWith
-studly
-substr
-substrCount
-title
-ucfirst
-upper
-uuid
-wordCount
-words
 
-# Illuminate\Support\Facades\DB
-`::访问`
-clearResolvedInstance
-clearResolvedInstances
-affectingStatement
-affectingStatements
-beginTransaction
-commit
-connection
-delete
-disableQueryLog
-enableQueryLog
-flushQueryLog
-getDefaultConnection
-getPdo
-getQueryLog
-insert
-listen
-logging
-prepareBindings
-pretend
-raw
-resolved
-rollBack
-select
-selectOne
-setDefaultConnection
-statement
 table('tableName')
 给定表返回一个流式查询构建器实例
 transaction
@@ -131,13 +31,9 @@ unprepared
 update(['fieldName称' => 'fieldValue'])
 更新数据
 getFacaRoot
-partialMock
-setFacadeApplication
-sholdReceive
-spy
-swap
 
-# Query builder instance查询构建器实例中
+
+# Query builder instance 查询构建器实例中
 `::访问`
 
 
@@ -179,124 +75,19 @@ redirect
 resource(string $name, string $controller, array $options = [])
 添加路由
 resources
-resourceVerbs
-respondWithRoute
-resourceParameters
-
 # Illuminate\Http\Request
+https://laravelacademy.org/post/21974
 `::访问`
-capture
-create
-createFrom
-createFromBase
-createFromGlobals
-enableHttpMethodParameterOverride
-getHttpMethodParameteOverride
-getMimeTypes
-getTrustedHeaderSet
-getTrustedHosts
-getTrustedProxies
-hasMacro
-HEADER_FORWARDED
-HEADER_X_FORWARDED_AWS_ELB
-HEADER_X_FORWARDED_FOR
-HEADER_X_FORWARDED_HOST
-HEADER_X_FORWARDED_PORT
-HEADER_X_FORWARDED_PREFIX
-HEADER_X_FORWARDED_PROTO
-HEADER_X_FORWARDED_TRAEFIK
-macro
-matchesType
-METHOD_CONNECT
-METHOD_DELETE
-METHOD_GET
-METHOD_HEAD
-METHOD_OPTIONS
-METHOD_PATCH
-METHOD_POST
-METHOD_PURGE
-METHOD_PUT
-METHOD_TRACE
-mixin
-normalizeQuerySting
-setFactory
-setTrustedHosts
+
 `->访问`
-allFiles
-anyFilled
-attributes
-bearerToken
-boolean
-cookie
-cookies
-dump
-duplicate
-except
-file
-files
-filled
-fingerprint
-flash
-flashExcept
-flashOnly
-flush
-format
-fullUrl
-fullUrlIs
-fullUrlWithQuery
-getAcceptableContentTypes
-getBasePath
-getBaseUrl
-getCharsets
-getClientIp
-getClientIps
-getContent
-getContentType
-getDefaultLocale
-getEncodings
-getETages
-getFormat
-getHost
-getHttpHost
-getLanguages
-getLocale
-getMethod
-getMimeType
-getPassword
-getPathInfo
-getPort
-getPreferredFormat
-getRequestFormat
-getRequestUri
-getRouteResolver
-getScheme
-getSchemeAndHttpHost
-getScriptName
-getSession
-getUri
-getUriForPath
-getUser
-getUserInfo
-getUserResolver
-hasAny
-hasCookie
-hasFile
-hasHeader
-hasPreviousSession
-hasSession
-header
-headers
-initialize
-instance
-ip
-ips
-is
-isFromTrustedProxy
-isJson
-isMethod
 input(param)
 获取某个参数
-
+only(['key1', 'key2',...] | 'key1', 'key2', ....)
+取出输入数据的子集
+except(['key1', 'key2',...] | 'key1', 'key2', ....)
+取出输入数据的子集
+validate(['param'=>'rulues'])
+有效性验证 rules有效值: ['required', 'unique:posts', 'max:255']通过 | 分隔
 
 
 
@@ -309,44 +100,7 @@ $snakeAttributes
 addGlobalScope
 all()
 获取所有参数数据
-cacheMutateAttributes
-clearBootedModels
-created
-CREATED_AT
-creating
-deleted
-deleting
-destroy
-encryptUsing
-flushEventListeners
-getActualClassNameForMorph
-getConnectionResolver
-getEventDispatcher
-getGlobalScope
-hasGlobalScope
-isIgnoringTouch
-isUnguarded
-observe
-on onWriteConnection
-reguard
-replicating
-resolveConnection
-resolveRelationUsing
-retrieved
-saved
-saving
-setConnectionResolver
-setEventDispatcher
-unguard
-unguarded
-unsetConnectionResolver
-updated
-UPDATED_AT
-updating
-with
-withoutEvents
-withoutTouching
-withoutTouchingOn
+c
 
 # # \App\Models\模型名的额外约束
 `::访问`
@@ -381,25 +135,7 @@ get('url', [controller::class, 'method'])
 get请求
 post('url', [controller::class, 'method'])
 post请求
-spy
-$app
-swap
-isMock
-resolved
-createMock
-partialMock
-_callStatic
-getFacadeRoot
-shouldReceive
-getMockableClass
-$resolvedInstance
-getFacadeAccessor
-getFacadeApplication
-setFacadeApplication
-clearResolvedInstance
-resolveFacadeInstance
-clearResolvedInstances
-createFreshMockInstance
+
 
 # Illuminate\Support\Facades\Route之路由对象, 访问get,post,put,patch,delete,options静态方法后返回的对象
 `::调用`

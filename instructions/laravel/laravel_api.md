@@ -1,14 +1,31 @@
+response() => Illuminate\Http\Response值response_instance
+
+# response_instance
+`非静态成员`
+header($key, $value[, $replace]) => response_instance
+添加响应头
+json([$data, $status, $haders]) => response_instance
+会自动将 Content-Type 头设置为 application/json，并使用 PHP 函数 json_encode 方法将给定数组转化为 JSON 格式数据
+
 # Illuminate\Database\Eloquent\Model
+protected $guarded = ['field_name']
+保护的字段
 `::访问`
 select('fieldName1', 'fieldName2',...) => queryBuilderInstance
 筛选返回查询构建器实例
 `->访问`
 with('tableName') => queryBuilderInstance
 关联的表
+orderByDesc('fieldName') => queryBuilderInstance
+倒序
+orderByAsc('fieldName') => queryBuilderInstance
+正序
 `类内部访问`
-$this->belongsTo('tableName') => queryBuilderInstance
+belongsTo('model_class') => queryBuilderInstance
 返回关联的表查询构建器实例
-
+withDefualt(null | associativeArray)
+通过属性填充默认的模型
+orderByDesc
 # 
 
 # Illuminate\Database\Eloquent\Factories\Factory
@@ -45,7 +62,7 @@ where([['fieldName1', fieldValue1, ['fieldName2', fieldValue2]]]) => queryBuilde
 orderBy('fieldName') => queryBuilderInstance
 value('fieldName') => value
 方法从结果中获取单个fieldValue
-find('idfieldValue') => record
+find('idFieldValue') => record
 通过 id fieldName来获取单条记录
 pluck('fieldName') => fieldValueArray
 获取包含单个fieldValue的数组
@@ -67,6 +84,8 @@ distinct() => queryBuilderInstance
 方法允许你强制查询返回不重复的结果集
 DB::raw()
 创建一个原生表达式
+with(callBack)
+一对一关联
 
 
 # Illuminate\Routing\Router

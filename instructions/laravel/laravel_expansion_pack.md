@@ -47,3 +47,7 @@ php artisan migrate
 迁移文件
 
 # Laravel Sanctum Api
+Laravel\Sanctum\NewAccessToken 
+`->访问`
+plainTextToken()
+访问令牌的纯文本值

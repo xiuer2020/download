@@ -18,4 +18,9 @@ auth->session($code)
 获取openid和session_key
 encryptor->decryptData($session_key, $iv, $encryptedData)
 解析加密数据
+tokens()->delete();
+撤销所有令牌
+createToken('token_name')->plainTextToken
+访问token数据
+
 

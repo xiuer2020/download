@@ -274,12 +274,10 @@ UDPSocket.send
 UDPSocket.write
 
 # 数据缓存
-wx.setStorageSync(Object object)
+wx.setStorageSync({key, data, success, fail, complete})
 设置同步数据缓存
-object: {key, data, success, fail, complete}
 wx.setStorage({key, data[, success[, fail[, complete]]]})
 设置数据缓存
-object: {key, data, success, fail, complete}
 wx.removeStorageSync
 wx.removeStorage
 wx.getStorageSync(string key)

@@ -8,11 +8,33 @@ json([$data, $status, $haders]) => response_instance
 会自动将 Content-Type 头设置为 application/json，并使用 PHP 函数 json_encode 方法将给定数组转化为 JSON 格式数据
 
 # Illuminate\Database\Eloquent\Model
+https://laravelacademy.org/post/22017
+`类内部访问`
+public $incrementing = boolean;
+使用非自增或非数字类型主键，必须在对应模型中设置 $incrementing 属性为 false
+protected $primaryKey = 'field_name';
+自定义主键字段
+protected $keyType = 'string';
+自定义主键类型
+public $timestamps = false;
+不想要这些 Laravel 自动管理的数据列created_at和updated_at
+protected $dateFormat = 'U';
+自定义时间格式 可以接受的值和 php 中 date () 函数第一个参数可以接受的值一样。http://php.net/manual/zh/function.date.php
+protected $attributes = ['field_name' => false];
+自定义字段的默认值
+protected $guarded = ['field_name'];
+受保护的字段
+protected $table = 'table_name';
+自定义绑定的表名
 protected $guarded = ['field_name']
 保护的字段
+protected $connection = 'datebase_name';
+自定义数据库连接
 `::访问`
 select('fieldName1', 'fieldName2',...) => queryBuilderInstance
 筛选返回查询构建器实例
+all()
+获取所有记录
 `->访问`
 with('tableName') => queryBuilderInstance
 关联的表
@@ -26,7 +48,32 @@ belongsTo('model_class') => queryBuilderInstance
 withDefualt(null | associativeArray)
 通过属性填充默认的模型
 orderByDesc
-# 
+
+# Illuminate\Database\Eloquent\Concerns 之 HasRelationships trait
+
+
+# Illuminate\Database\Eloquent\Model 之 additional_constraints 额外约束
+`::访问`
+where('fieldName称', 'fieldValue')
+fieldName对应关系
+where([['fieldName1名称', 'fieldName1值'],['fieldName1名称', 'fieldName1值']])
+多fieldName对应关系
+`->访问`
+orderBy('fieldName称', 'desc')
+通过某fieldName排序
+take(Number)
+获取数量
+get()
+最终获取数据
+hasOne('related_table_name', $foreignKey = null, $localKey = null) => record
+定义一对一关联关系
+belongsTo('related_table_name', $foreignKey = null, $ownerKey = null, $relation = null)
+定义相对一对一， 一对多（逆向）关联关系
+hasMany($related, $foreignKey = null, $localKey = null)
+定义一对多关联关系
+belongsToMany($related, $table = null, $foreignPivotKey = null, $relatedPivotKey = null, $parentKey = null, $relatedKey = null, $relation = null)
+定义多对多, 相对多对多关联关系
+
 
 # Illuminate\Database\Eloquent\Factories\Factory
 `::访问`
@@ -94,46 +141,55 @@ redirect
 resource(string $name, string $controller, array $options = [])
 添加路由
 resources
-# Illuminate\Http\Request
+
+# Illuminate\Http 之 Request class
 https://laravelacademy.org/post/21974
 `::访问`
 
 `->访问`
-input(param)
-获取某个参数
-only(['key1', 'key2',...] | 'key1', 'key2', ....)
-取出输入数据的子集
-except(['key1', 'key2',...] | 'key1', 'key2', ....)
-取出输入数据的子集
-validate(['param'=>'rulues'])
-有效性验证 rules有效值: ['required', 'unique:posts', 'max:255']通过 | 分隔
+path()
+获取请求的当前路径信息
+url()
+获取请求的URL（没有查询字符串）
+method()
+获取请求方法
+validate(Request $request, array $rules, array $messages = [], array $customAttributes = [])
+使用给定的规则验证给定的请求 规则可选值:https://www.cnblogs.com/yiweiyihang/p/7782349.html
+all($keys = null)
+获取请求的所有输入和文件
+input($key = null, $default = null)
+从请求中检索输入项
+query($key = null, $default = null)
+从请求中检索查询字符串项。
+boolean($key = null, $default = false)
+当值为“1”、“true”、“on”和“yes”时返回true。否则，返回false
+only($keys)
+从输入数据中获取包含所提供键和值的子集。
+except($keys)
+获取除指定项数组之外的所有输入
+has($key)
+确定请求是否包含给定的输入项键。
+hasAny($keys)
+确定请求是否包含给定的输入项键。
+filled($key)
+确定请求是否包含输入项的非空值。
+missing($key)
+确定请求是否缺少给定的输入项键
+flash()
+将当前请求的输入闪存到会话。
+flashOnly($keys)
+只刷新会话的部分输入
+flashExcept($keys)
+只刷新会话的部分输入。
+old($key = null, $default = null)
+检索旧的输入项。
+cookie($key = null, $default = null)
+从请求中检索cookie。
 
 
-
-# \App\Models\modelName
-`::访问`
-query
-$encrypter
-$manyMethod
-$snakeAttributes
-addGlobalScope
-all()
-获取所有参数数据
-c
-
-# # \App\Models\模型名的额外约束
-`::访问`
-where('fieldName称', 'fieldValue')
-fieldName对应关系
-where([['fieldName1名称', 'fieldName1值'],['fieldName1名称', 'fieldName1值']])
-多fieldName对应关系
-orderBy('fieldName称', 'desc')
-通过某fieldName排序
-take(Number)
-获取数量
+# Illuminate\Support\Facades\Cookie
 get()
-最终获取数据
-
+从请求中检索cookie。
 
 # Closure
 `::访问`

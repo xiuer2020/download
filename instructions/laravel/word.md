@@ -15,6 +15,7 @@ model 模型
 request 请求
 method 方法
 Instance 实例
-
+class 类
+additional_constraints 额外约束
 
 

@@ -150,7 +150,6 @@ $action = Route::currentRouteAction();
 在 app/Http/Middleware 目录生成文件
 请求之前/之后的中间件：区别是`中间件逻辑位于 $next($request) 语句之前还是之后`
 
-注册中间件
 
 
 全局中间件
@@ -158,13 +157,14 @@ $action = Route::currentRouteAction();
 
 
 分配中间件到指定路由
-[1]在 app/Http/Kernel.php 文件中分配给该中间件一个 key
-[2]
+[1]注册: 在 app/Http/Kernel.php 文件中分配给该中间件一个 key
+[2]绑定: Illuminate\Support\Facades\Route::route_method()->middleware($middleware = null)
 
 
 阻止中间件被应用到群组中的单个路由: https://laravelacademy.org/post/21971
 
 中间件组
+
 中间件排序
 中间件参数
 终端中间件
@@ -180,18 +180,12 @@ X-XSRF-Token
 Laravel 还会将 CSRF 令牌保存到名为 XSRF-TOKEN 的 Cookie 中，你可以使用该 Cookie 值来设置 X-XSRF-TOKEN 请求头。
 
 # 控制器
-控制器类存放在 app/Http/Controllers 目录下
+控制器类存放在 `app/Http/Controllers` 目录下
 
-定义控制器
-命令 `php artisan make:controller` 控制器名称 --resource 
---resource参数为定义特殊资源控制器
+[1]定义: 在命名空间namespace App\Http\Controllers;下继承Controller;
+[2]绑定: 在 routes/web.php 中通过Route::methodType('path', [controllerClass::class, 'callback']);
 
-在控制器下定义回调方法
-
-[1]use App\Http\Controllers\UserController;
-[2]在 routes/web.php 中通过Route::methodType('path', [控制器名称::class, 'callback']);定义指向该控制器动作的路由
-
-单一动作控制器：在这个控制器中定义 __invoke 方法，为这个单动作控制器注册路由的时候，不需要指定方法
+`单一动作控制器`：在这个控制器中定义 `__invoke` 方法，为这个单动作控制器注册路由的时候，不需要指定方法
 
 控制器中间件
 在`控制器构造函数内部`$this->middleware('中间件名')[->only(callbak) | except(callback)]
@@ -550,15 +544,9 @@ Redis 门面
 
 Eloquent ORM
 # Eloquent 模型入门
-php artisan make:model Flight
-定义模型
+[1]定义: 在namespace App\Models;下继承Model;
 
-protected $primaryKey = 'flight_id';
-public $incrementing = false;
-protected $keyType = 'string';
-public $timestamps = false;
-protected $dateFormat = 'U';
-protected $attributes = ['delayed' => false];
+
 
 获取模型
 添加额外约束

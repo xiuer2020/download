@@ -1,11 +1,24 @@
-response() => Illuminate\Http\Response值response_instance
+# global
+route($name, $parameters = [], $absolute = true)
+生成 URL
+redirect($to = null, $status = 302, $headers = [], $secure = null) => ResponseTrait_trait
+重定向
+response($content = '', $status = 200, array $headers = []) => ResponseTrait_trait
+从应用程序返回新响应。
+url($path = null, $parameters = [], $secure = null)
+为应用程序生成url。
+session($key = null, $default = null)
+获取和存储 Session 数据
 
-# response_instance
-`非静态成员`
-header($key, $value[, $replace]) => response_instance
-添加响应头
-json([$data, $status, $haders]) => response_instance
-会自动将 Content-Type 头设置为 application/json，并使用 PHP 函数 json_encode 方法将给定数组转化为 JSON 格式数据
+# Illuminate\Support\Facades 之 Response class
+`待了解响应宏`
+
+# Illuminate\Contracts\Routing 之 UrlGenerator interface
+current();
+获取不带请求字符串的当前 URL...
+
+previous($fallback = false)
+获取上一个请求的完整 URL...
 
 # Illuminate\Database\Eloquent\Model
 https://laravelacademy.org/post/22017
@@ -48,9 +61,6 @@ belongsTo('model_class') => queryBuilderInstance
 withDefualt(null | associativeArray)
 通过属性填充默认的模型
 orderByDesc
-
-# Illuminate\Database\Eloquent\Concerns 之 HasRelationships trait
-
 
 # Illuminate\Database\Eloquent\Model 之 additional_constraints 额外约束
 `::访问`
@@ -134,8 +144,11 @@ DB::raw()
 with(callBack)
 一对一关联
 
+# Illuminate\Routing 之 UrlGenerator class
+full();
+获取包含请求字符串的当前 URL...
 
-# Illuminate\Routing\Router
+# Illuminate\Routing 之 Router
 `::访问`
 redirect
 resource(string $name, string $controller, array $options = [])
@@ -146,6 +159,7 @@ resources
 https://laravelacademy.org/post/21974
 `::访问`
 
+
 `->访问`
 path()
 获取请求的当前路径信息
@@ -155,6 +169,8 @@ method()
 获取请求方法
 validate(Request $request, array $rules, array $messages = [], array $customAttributes = [])
 使用给定的规则验证给定的请求 规则可选值:https://www.cnblogs.com/yiweiyihang/p/7782349.html
+validateWithBag(string $errorBag, array $rules, ...$params)
+在一个命名错误包中验证请求并存储错误消息
 all($keys = null)
 获取请求的所有输入和文件
 input($key = null, $default = null)
@@ -185,7 +201,79 @@ old($key = null, $default = null)
 检索旧的输入项。
 cookie($key = null, $default = null)
 从请求中检索cookie。
+hasValidSignature(bool $absolute = true)
+验证输入请求包含有效的签名
+session()
+获取与请求关联的会话。
 
+file($key = null, $default = null) => temp_obj
+从请求中检索文件。 https://laravelacademy.org/post/21974
+tem_obj->isValid()
+返回文件是否已成功上载。
+
+hasFile($key)
+确定上载的数据是否包含文件。
+
+# Illuminate\Session 之 Store class
+get($key, $default = null)
+从会话中获取项目。
+all()
+从 Session 中获取所有数据
+has($key)
+判断 Session 中是否存在指定项
+exists($key)
+判断某个值在 Session 中是否存在
+put($key, $value = null)
+在 Session 中存储数据
+push($key, $value)
+推送数据到值为数组的 Session
+pull($key, $default = null)
+获取&删除数据
+flash(string $key, $value = true)
+只在下个请求中有效的数据
+forget($keys)
+ Session 中移除指定数据
+ regenerate($destroy = false)
+ 重新生成 Session ID
+
+# Illuminate\Http 之 ResponseTrait trait
+header($key, $values, $replace = true) => ResponseTrait trait
+添加一系列响应头
+withHeaders($headers)
+指定头信息数组添加到响应
+header($key, $value[, $replace]) => response_instance
+添加响应头
+json([$data, $status, $haders]) => response_instance
+会自动将 Content-Type 头设置为 application/json，并使用 PHP 函数 json_encode 方法将给定数组转化为 JSON 格式数据
+cookie($cookie)
+添加 Cookie 到响应
+
+# Illuminate\Routing 之 Route class
+named(...$patterns)
+判断当前请求是否被路由到给定命名路由
+
+# Illuminate\Routing 之 response_instace
+with($key, $value = null)
+重定向到一个新的 URL 并将数据存储到一次性 Session 
+route($route, $parameters = [], $status = 302, $headers = [])
+创建对命名路由的新重定向响应。
+action($action, $parameters = [], $status = 302, $headers = [])
+生成重定向到控制器动作的响应
+away($path, $status = 302, $headers = [])
+重定向到应用之外的其他域名
+download($file, $name = null, array $headers = [], $disposition = 'attachment')
+生成强制用户浏览器下载给定路径文件的响应
+streamDownload($callback, $name = null, array $headers = [], $disposition = 'attachment')
+将给定操作的字符串响应转化为可下载的响应而不用将操作内容写入磁盘
+file($file, array $headers = [])
+直接在用户浏览器显示文件
+
+# Illuminate\Support\Facades 之 URL class
+`::访问`
+signedRoute(string $name, array $parameters = [], \DateTimeInterface|\DateInterval|int $expiration = null, bool $absolute = true)
+创建这个签名 URL
+temporarySignedRoute(string $name, \DateTimeInterface|\DateInterval|int $expiration, array $parameters = [], bool $absolute = true)
+生成一个包含过期时间的临时签名 URL
 
 # Illuminate\Support\Facades\Cookie
 get()
@@ -205,11 +293,85 @@ decryptString(string $value)=>string
 
 
 # Illuminate\Support\Facades\Route
+https://laravelacademy.org/post/21973
 `::调用`
-get('url', [controller::class, 'method'])
-get请求
-post('url', [controller::class, 'method'])
-post请求
+get(string $uri, array|string|callable|null $action = null)
+get 请求
+post(string $uri, array|string|callable|null $action = null)
+post 请求
+match(array|string $methods, string $uri, array|string|callable|null $action = null)
+响应多种请求动作
+any(string $uri, array|string|callable|null $action = null)
+响应任意请求动作
+resourceVerbs(array $verbs = [])
+注册一个资源路由
+resources(array $resources, array $options = [])
+注册多个资源路由
+apiResource(string $name, string $controller, array $options = [])
+自动排除 reate 和 edit 这两个路由
+redirect(string $uri, string $destination, int $status = 302)
+重定向到其他 URI 的路由
+permanentRedirect(string $uri, string $destination)
+返回 301 状态码
+where(array  $where)
+约束路由参数的格式
+pattern(string $key, string $pattern)
+路由参数在全局范围内被给定正则表达式约束 需要在 RouteServiceProvider 类的 boot 方法中定义
+name(string $value)
+定义该路由的名称
+group(\Closure|string|array $attributes, \Closure|string $routes)
+路由分组
+middleware(array|string|null $middleware)
+给某个路由分组中定义的所有路由分配中间件
+domain(string $value)
+处理子域名路由
+prefix(string  $prefix)
+来为分组中每个路由添加一个给定 URI 前缀
+name(string $value)
+路由名称设置前缀
+bind(string $key, string|callable $binder)
+使用自定义的解析逻辑 在 RouteServiceProvider 类的 boot 方法中使用
+fallback(array|string|callable|null $action = null)
+定义一个当所有其他路由都未能匹配请求 URL 时所执行的路由
+current(); 
+获取当前路由实例
+currentRouteName();
+获取当前路由名称
+currentRouteAction();
+获取当前路由action属性
+`->访问`
+待了解`CSRF 保护`
+待了解`自定义键`
+待了解`访问频率限制`
+待了解`嵌套资源`
+待了解`路由缓存`
+group($callback)
+创建具有共享属性的路由组。
+view(string $uri, string $view, array $data = [], int $status = 200, array $headers = [])
+返回一个视图
+withoutMiddleware($middleware)
+需要阻止中间件被应用到群组中的单个路由
+
+
+# App\Http\Controllers
+`::访问`
+emergenc(string $message, array $context = [])
+写入紧急日志
+alert(string $message, array $context = [])
+写入警报日志
+critica(string $message, array $context = [])
+写入严重日志
+error(string $message, array $context = [])
+写入错误日志
+warning(string $message, array $context = [])
+写入警告日志
+notic(string $message, array $context = [])
+写入通知日志
+info(string $message, array $context = [])
+写入信息日志
+debug(string $message, array $context = [])
+写入调试日志
+
 
 
 # Illuminate\Support\Facades\Route之路由对象, 访问get,post,put,patch,delete,options静态方法后返回的对象

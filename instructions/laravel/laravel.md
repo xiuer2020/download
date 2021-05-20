@@ -157,13 +157,15 @@ $action = Route::currentRouteAction();
 
 
 分配中间件到指定路由
-[1]注册: 在 app/Http/Kernel.php 文件中分配给该中间件一个 key
+[1]注册: 在 app/Http/Kernel.php 文件中 $routeMiddleware 属性分配给该中间件一个 key
 [2]绑定: Illuminate\Support\Facades\Route::route_method()->middleware($middleware = null)
 
 
 阻止中间件被应用到群组中的单个路由: https://laravelacademy.org/post/21971
 
 中间件组
+[1]注册: 在 app/Http/Kernel.php 文件中 $middlewareGroups 属性 
+
 
 中间件排序
 中间件参数

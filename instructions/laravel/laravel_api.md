@@ -20,6 +20,30 @@ current();
 previous($fallback = false)
 获取上一个请求的完整 URL...
 
+# Illuminate\Support 之 Collection class
+all()
+*获取集合中的所有项目。
+lazy()
+*获取此集合中项目的延迟集合。
+avg($callback = null)
+*获取给定键的平均值。
+median($key = null)
+*获取给定键的中位数。
+mode($key = null)
+*获取给定键的模式。
+collapse()
+*将项集合折叠到单个数组中。
+contains($key, $operator, $value = null)
+*确定集合中是否存在项。
+crossJoin(...$lists)
+*交叉连接给定的列表，返回所有可能的排列。
+diff($items)
+*获取集合中给定项中不存在的项。
+diffUsing($items, callback $callback)
+*使用回调获取集合中不在给定项中的项。
+
+
+
 # Illuminate\Database\Eloquent\Model
 https://laravelacademy.org/post/22017
 `类内部访问`

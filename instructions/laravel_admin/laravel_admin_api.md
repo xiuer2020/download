@@ -51,7 +51,171 @@ orderByRaw($sql, $bindings = [])
 take($value)
 *设置查询的“限制”值。
 
+# Encore\Admin\Grid\Column;
+
+# Encore\Admin\Actions\RowAction && Encore\Admin\Actions\BatchAction
+public $name = '批量复制';
+动作名称
+public function handle(Collection $collection)
+点击动作后执行
+public function dialog()
+互动操作定义
+public function form()
+定义表单结构
+text($column, $label = '')
+文字类型
+email($column, $label = '')
+邮件类型
+integer($column, $label = '')
+整型类型
+ip($column, $label = '')
+协议类型
+url($column, $label = '')
+URL地址类型
+password($column, $label = '')
+密码类型
+mobile($column, $label = '')
+移动电话类型
+textarea($column, $label = '')
+文本域类型
+select($column, $label = '')
+下拉框类型
+multipleSelect($column, $label = '')
+多选下拉框类型
+checkbox($column, $label = '')
+复选框类型
+radio($column, $label = '')
+单选框类型
+file($column, $label = '')
+文件类型
+image($column, $label = '')
+图片类型
+multipleFile($column, $label = '')
+多选文件类型
+multipleImage($column, $label = '')
+多选图片类型
+date($column, $label = '')
+日期类型
+datetime($column, $label = '')
+日期时间类型
+time($column, $label = '')
+时间类型
+hidden($column, $label = '')
+隐藏类型
+
+
+
+
+
+# grid_actions_argument
+disableDelete()
+去掉删除
+disableEdit()
+去掉编辑
+disableView
+去掉查看
+row
+当前行的数据数组
+getKey()
+获取当前行主键值
+add(action_instance)
+行动作加入到表格
+
+# grid_batchActions
+disableDelete()
+禁用批量删除
+add(batch_action_instance)
+行批量动作加入到表格
+
+# grid_filter_argument
+column('proportion1/2', function ($filter))
+多列布局
+group('field_name', function ($group)))
+过滤器组
+disableIdFilter()
+去掉默认的id过滤器
+scoped()
+定义查询范围
+equal('field_name', 'label')
+相等
+notEqual('field_name', 'label')
+不相等
+like('field_name', 'label')
+包含
+ilike('field_name', 'label')
+包含(不区分大小写)
+contains('field_name', 'label')
+包含
+startsWith('field_name', 'label')
+查询以输入内容开头的title字段数据
+startsWith('field_name', 'label')
+查询以输入内容结尾的title字段数据
+gt('field_name', 'label')
+大于
+lt('field_name', 'label')
+小于
+between('field_name', 'label')
+in('field_name', 'label')
+notIn('field_name', 'label')
+date('field_name', 'label')
+day('field_name', 'label')
+month('field_name', 'label')
+year('field_name', 'label')
+where('field_name', 'label')
+
+# grid_filter_argument_form_limit
+placeholder('placeholder')
+url();
+限制输入格式为url
+email();
+限制输入格式为email
+integer();
+限制输入格式为integer
+ip();
+限制输入格式为ip
+mac();
+限制输入格式为mac
+mobile();
+限制输入格式为mobile
+decimal($options = []);
+限制输入格式为十进制的
+currency($options = []);
+限制输入格式为货币
+percentage($options = []);
+限制输入格式为百分比
+inputmask($options = [], $icon = 'pencil');
+输入掩码
+select(array $array)
+下拉选择
+multipleSelect(array $array)
+多选
+radio(array $array)
+单选
+checkbox(array $array)
+复选
+datetime($options)
+通过日期时间组件来查询 $opton可选值：https://getdatepicker.com/4/Options/#options
+date();
+相当于 `datetime(['format' => 'HH:mm:ss'])`
+time();
+相当于 `datetime(['format' => 'DD'])`
+day();
+` 相当于 `datetime(['format' => 'MM'])`
+month();
+相当于 `datetime(['format' => 'YYYY'])`
+year()
+
 # column_return
+editable()
+可编辑的 参数1可选[textarea,select,date,datetime,year,month,day] 参数1为select是, 参数2是选项array
+switch(array $states)
+快速将列变成开关组件
+radio(array $options)
+设为单选组件
+checkbox(array $options)
+设为复选组件
+data()
+格式化输出
 initAttributes()
 *初始化列属性。
 define($name, $definition)
@@ -81,15 +245,57 @@ sortable($cat = null)
 help($help = '')
 *设置列的帮助消息。
 filter($builder = null)
-*设置列筛选器。
+*设置列筛选器。 可选值 [like,date,time,datetime,array,range] 可组合
 display(Closure $callback)
 *添加显示回调。
 displayUsing($abstract, $argument = [])
 *使用显示摘要显示。
+hide()
+默认情况下隐藏此列
+gravatar($size = 30)
+以电子邮件格式将字段显示为gavatar。
+loading($values = [], $others = [])
+显示为一个loading加载icon
+filesize()
+将文件大小转换为可读格式，如“100mb”。
+downloadable($server = '')
+可下载链接
+icon(array $setting, $default = '')
+显示icon
+image($server = '', $width = 200, $height = 200)
+图片显示
+label($style = 'success')
+显示label标签
+link($href = '', $target = '_blank')
+将字段显示为一个链接。
+progress($style = 'primary', $size = 'sm', $max = 100)
+将字段显示为一个进度条
+table($titles = [])
+将字段显示为一个表格
+carousel(int $width = 300, int $height = 200, $server = '')
+调用显示为图片轮播组件
+copyable()
+可复制
+dot($options = [], $default = '')
+加上一个带颜色的圆点
+qrcode($formatter = null, $width = 150, $height = 150)
+二维码显示
+using(array $values, $default = null)
+*使用数组值映射显示列。
+replace(array $replacements)
+*用给定的映射替换输出值。
+bool(array $map = [], $default = false)
+*将列显示为布尔值`✓` 是真的，而且`✗` 为假。
+default($default = '-')
+*如果为空，则将列显示为默认值。
 
-# Encore\Admin\Grid 之 grid_instance(可采用链式写法)
-__construct(Eloquent $model, Closure $builder = null)
-创建新的网格实例。
+# Encore\Admin\Grid 之 grid_instance
+disableBatchActions()
+禁用批量操作
+actions($actions)
+定义模型表格动作
+batchActions()
+定义模型表格批量动作
 option($key, $value = null)
 获取或设置网格选项。
 getKeyName()
@@ -106,8 +312,7 @@ addJsonColumn($name, $label = '')
 将json类型的列添加到网格。
 prependColumn($column = '', $label = '')
 将列前置到网格。
-model() => buider class
-获取网格模型。
+model() => model_install
 paginate($perPage = 20)
 对网格分页。
 paginator()
@@ -195,7 +400,12 @@ renderExportButton()
 *“渲染导出”按钮。
 disableActions(bool $disable = true)
 *禁用所有操作。
+fixColumns(）
+固定列
 
+# model_instance
+collection(\Closure $callback = null)
+*设置集合回调。
 
 
 

@@ -194,6 +194,11 @@ date('field', 'placeholder')
 # Encore\Admin\Grid 之 grid_instance->quickCreate(function (Grid\Tools\QuickCreate $create)) 之 $create->method() => object
 options(Array)
 
+# 自定义工具
+https://laravel-admin.org/docs/zh/1.x/model-grid-custom-tools
+
+
+
 # use Encore\Admin\Actions\RowAction
 public $name = '批量复制';
 动作名称

@@ -32,7 +32,5 @@ Axios.interceptors.request.use(params => {
   return params;
 
 })
-<!-- 添加axios请求拦截器, 该方法在请求之前触发 -->
-Vue.prototype.axios = Axios;
-<!-- 插件封装 -->
+
 

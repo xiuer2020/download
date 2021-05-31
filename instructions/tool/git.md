@@ -41,7 +41,8 @@ git push origin master [-u]
 <!-- 推送到远程仓库master分支(-u参数,会把本地的master分支和远程的master分支关联起来) -->
 git pull origin master
 <!-- 拉取远程仓库master分支 -->
-
+git rm -r --cached file_name
+<!-- 删除远程的文件 -->
 git --version                       
 <!-- 命令提示 -->
 

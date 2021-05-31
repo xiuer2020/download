@@ -67,6 +67,8 @@ protected $guarded = ['field_name']
 保护的字段
 protected $connection = 'datebase_name';
 自定义数据库连接
+protected $append = ['variable1', 'variable']
+如果你的需要的数据，是根据数据库中的某个值，计算出来; 还需定义fucntion getVariableAttribute 命名上variable使用下横线, 函数上使用大驼峰
 `::访问`
 select('fieldName1', 'fieldName2',...) => queryBuilderInstance
 筛选返回查询构建器实例
@@ -84,7 +86,7 @@ belongsTo('model_class') => queryBuilderInstance
 返回关联的表查询构建器实例
 withDefualt(null | associativeArray)
 通过属性填充默认的模型
-orderByDesc
+
 
 # Illuminate\Database\Eloquent\Model 之 additional_constraints 额外约束
 `::访问`
@@ -131,9 +133,37 @@ update(['fieldName称' => 'fieldValue'])
 getFacaRoot
 
 
+# Illuminate\Database\Eloquent 之 Builder class
+where($column, $operator = null, $value = null, $boolean = 'and')
+*在查询的主键上添加where子句。
+whereColumn($first, $operator = null, $second = null, $boolean = 'and')
+*添加一个“where”子句，将两列比较到查询。
+whereRaw($sql, $bindings = [], $boolean = 'and')
+*向查询添加一个raw where子句。
+whereIn($colum, $values, $boolean = 'and', $not = false)
+*向查询添加“where in”子句。
+whereNotIn($column, $value, $boolean = 'and')
+*向查询添加“where not in”子句。
+whereNull($column, $boolean = 'and', $not = false)
+*向查询添加“where null”子句。
+whereNotNull($column, $boolean = 'and')
+*向查询添加“where notnull”子句。
+whereBetween($column, array $values, $boolean = 'and', $not = false)
+*向查询中添加where-between语句。
+orderBy($column, $direction = 'asc')
+*向查询添加“orderby”子句。
+orderByDesc($colum)
+*向查询添加降序“orderby”子句。
+orderByRaw($sql, $bindings = [])
+*向查询添加原始的“orderby”子句。
+take($value)
+*设置查询的“限制”值。
+
+
 # Query builder instance 查询构建器实例中
 `::访问`
-
+destroy(int $id)
+通过主键删除记录
 
 `->访问`
 where('fieldName', 'fieldValue') => queryBuilderInstance
@@ -149,6 +179,10 @@ pluck('fieldName') => fieldValueArray
 获取包含单个fieldValue的数组
 get() => recordArray
 获取表中所有记录
+first()
+获取表中第一条数据
+delete()
+删除数据
 count() => number
 获取表中所有记录数
 max('fieldName') => value

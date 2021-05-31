@@ -80,6 +80,7 @@ JSON组件
 表单回调
 
 表单初始化
+在 app/Admin/bootstrap.php
 
 表单布局
 

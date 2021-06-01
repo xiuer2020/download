@@ -13,6 +13,8 @@ php artisan migrate
 数据迁移
 php artisan serve
 运行laravel项目服务器
+php artisan storage:link
+快速创建软链接命令
 
 # 入门套件
 [1]composer require laravel/breeze --dev

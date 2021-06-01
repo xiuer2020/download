@@ -1,3 +1,5 @@
+https://webpack.docschina.org/concepts/
+
 # 要安装最新版本或特定版本，请运行以下命令之一：
 npm install --save-dev webpack
 npm install --save-dev webpack@<version>

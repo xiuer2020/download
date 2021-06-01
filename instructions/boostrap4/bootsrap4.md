@@ -1,6 +1,4 @@
-
-
-
+https://getbootstrap.net/docs/getting-started/introduction/
 # 引入
 [1]1行css
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -153,9 +151,25 @@ dom[data-toggle=popover title=title]
 滚动监听
 dom[data-target=#target] a[href=demo]
 
-提示冒泡
 
-
+# 公共样式
+边框(border): 添加, 消减, 边框颜色, 圆角边框, 大小
+清动浮动(clearfix)
+关闭图标(close icon)
+颜色(color):颜色, 背景颜色
+Display显示属性
+嵌入(embed)
+Flex弹性布局: 内容对齐与对准, 对齐项目, 自对齐, 自相等, 等宽变幻, 自浮动, 垂直布局, Wrap包裹, Order排序, 对齐内容, 
+Float浮动属性
+图像替换
+固顶(底）及定位
+读屏器 (Screenreaders)
+阴影(shadows)
+规格(sizi)
+间隔(spacing)
+文本处理: 文本对齐, 文本包裹和溢出（换行）处理, 换行, 字母大小写转换, 字体粗细和斜体效果, 等宽字体, 重置颜色, 文字装饰,
+垂直对齐(vertical align)
+Visibility显示或隐藏(能见度)处理
 
 
 

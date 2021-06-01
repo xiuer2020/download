@@ -1,3 +1,5 @@
+https://www.runoob.com/mysql/mysql-tutorial.html
+
 # 安装
 官网下载https://dev.mysql.com/downloads/file/?id=501540
 

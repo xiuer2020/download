@@ -1,13 +1,19 @@
 # 基础
-wx.canIUse
+wx.canIUse(string schema) => boolean
+判断小程序的AP
 wx.base64ToArrayBuffer
-wx.arrayBufferToBase64
+要转化成 ArrayBuffer 对象的 Base64 字符串
+wx.arrayBufferToBase64(ArrayBuffer arrayBuffer)
+将 ArrayBuffer 对象转成 Base64 字符串
 
 # 系统
 系统信息
 wx.getSystemInfoSync
+获取系统信息(同步版)
 wx.getSystemInfoAsync
+获取系统信息
 wx.getSystemInfo
+获取系统信息
 
 # 更新
 wx.updateWeChatApp

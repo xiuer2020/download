@@ -1,3 +1,5 @@
+https://www.lodashjs.com/
+
 # 安装
 <script src="lodash.js"></script>
 <!-- 浏览器环境： -->

@@ -1,13 +1,10 @@
+https://developers.weixin.qq.com/miniprogram/dev/framework/
 
 # 起步
-
-
-
-# 小程序简介
-
-# 小程序注册
-[1]小程序注册页 https://mp.weixin.qq.com/wxopen/waregister?action=step1
-
+小程序注册页 https://mp.weixin.qq.com/wxopen/waregister?action=step1
+[1]申请AppID https://mp.weixin.qq.com/wxopen/waregister?action=step1
+[2]小程序开发
+[3]小程序发布 https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=125706696
 
 # 小程序技术发展史
 当微信中的 [WebView] 逐渐成为移动 [Web] 的一个重要入口时，微信就有相关的 `JS API` 了
@@ -26,34 +23,26 @@ JS-SDK 的模式并没有解决使用移动网页遇到的[体验不良]的问�
 [3]客户端就会装载这个页面的 [WXML] 结构和 [WXSS] 样式 最后客户端会装载 [js]
 [4]Page 页面构造器把 [data] 数据和 [index.wxml] 一起渲染
 
-
-# 小程序协同工作和发布
-
-
 # 协同工作
-
+https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/release.html#%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C
+虚拟项目管理: 产品组, 设计组, 开发组, 测试组
+项目管理成员负责统筹整个项目的进展和风险、把控小程序对外发布的节奏，产品组提出`需求`，设计组与产品讨论并对需求进行抽象，设计出可视化流程与图形，输出`设计方案`。开发组依据设计方案，进行程序`代码的编写`，代码编写完成后，产品组与设计组体验小程序的整体流程，测试组编写`测试`用例并对小程序进行各种边界测试。
 
 # 小程序的版本
-
+https://mp.weixin.qq.com/wxamp/wacodepage/getcodepage?token=125706696&lang=zh_CN
 
 # 发布上线
 预览-> 上传代码 -> 提交审核 -> 发布
 
 
 # 运营数据
-
-
-
-
-
+方式1: 后台查看: https://mp.weixin.qq.com/
+方式2: 小程序数据助手
 
 
 # 目录结构
 `app.json, app.wxss, app.js `
 `page.wxml, page.js, page.wxss, page.json`
-
-# 配置小程序
-
 
 # 全局配置 app.json
 https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window
@@ -66,18 +55,11 @@ tabBar: {color, selectedColor, backgroundColor, borderStyle, list, position, cus
 usingComponents: {"componentName": "componentPath"}
 
 
-
-
-
-
 # 页面配置
-
+每一个小程序页面也可以使用同名 .json 文件来对本页面的窗口表现进行配置
 
 # sitemap 配置
-
-
-# 小程序框架
-
+配置其小程序页面是否允许微信索引
 
 # 场景值
 https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html
@@ -1845,7 +1827,18 @@ Options.methods: Object
 
 
 # 微信支付
+申请流程
+[1]在线提交营业执照、身份证、银行账户等基本信息，并按指引完成账户验证
+[2]微信支付团队会在1-2个工作日内完成审核，审核通过后请在线签约，即可体验各项产品能力
+[3]如需自行开发完成收款，需将商户号与APPID进行绑定，或开通微信收款商业版（免开发）完成收款
 
+开通
+在云控制台 -> 设置 -> 全局设置中开通
+
+权限
+添加商户号后需要分别进行帐号绑定、jsapi 和 api 退款权限授权
+1）帐号绑定：商户号的超级管理员需要在微信支付提供的【微信支付商家助手】小程序上确认授权。
+2）jsapi 和 api 退款权限，需要前往微信支付商户平台我的授权产品中进行确认授权。
 
 # 支付
 

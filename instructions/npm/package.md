@@ -1,3 +1,4 @@
+https://www.npmjs.com.cn/
 
 # vue必备环境依赖包
 $ core-js                       

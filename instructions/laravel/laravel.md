@@ -1,3 +1,5 @@
+https://laravelacademy.org/books/laravel-docs-8
+
 目录索引
 https://laravelacademy.org/post/21955
 

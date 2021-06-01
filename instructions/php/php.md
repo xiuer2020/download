@@ -1,3 +1,5 @@
+https://www.runoob.com/php/php-tutorial.html
+
 # 基本的输出方式
 1) echo 内容或 echo(内容)
 2) prit 内容或 prit(内容)

@@ -1,3 +1,5 @@
+https://www.cnblogs.com/best-always/p/11023587.html
+
 "new_window":“新窗口”
 "close_window":“关闭窗口”
 "prompt_open_file":“提示打开文件”

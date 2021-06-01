@@ -1,6 +1,6 @@
 # type 类型
 
 # miscellaneous 杂
-encryptor机密机
-instance实例
-decrypt解密
+encryptor 机密机
+instance 实例
+decrypt 解密

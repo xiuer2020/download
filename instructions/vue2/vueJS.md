@@ -1,3 +1,5 @@
+https://cn.vuejs.org/v2/guide/
+
 # 安装
 # CDN引入
 开发模式: https://cdn.jsdelivr.net/npm/vue/dist/vue.js

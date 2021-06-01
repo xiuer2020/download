@@ -1,3 +1,5 @@
+http://document.thinkphp.cn/manual_3_2.html
+
 # 下载3.2框架后，解压缩到web目录下面，可以看到初始的目录结构如下：
   www  [WEB部署目录]（或者子目录）
   ├─index.php       入口文件

@@ -1,3 +1,5 @@
+https://v3.cn.vuejs.org/guide/installation.html
+
 # 安装
 方式: [`cdn, npm, cli`]
 

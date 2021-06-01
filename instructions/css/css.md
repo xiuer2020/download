@@ -1,3 +1,4 @@
+https://www.runoob.com/cssref/css-reference.html
 # css hack
 1) IE6能识别下划线" _ "和星号" * "，IE7能识别星号" * "，但不能识别下划线"_"，而firefox两个都不能认识属性 hack
 2) IE6能识别*html .class{}，IE7能识别*+html .class{}或者*:first-child+html .class{}。

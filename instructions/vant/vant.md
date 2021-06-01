@@ -1,3 +1,5 @@
+https://vant-contrib.gitee.io/vant/#/zh-CN/
+
 # word
 [plain] 浅的; [distance] 距离; 
 

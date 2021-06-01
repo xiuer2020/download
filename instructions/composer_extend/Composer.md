@@ -1,3 +1,4 @@
+https://docs.phpcomposer.com/03-cli.html
 # 局部安装
 终端输入
 [1]php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');"

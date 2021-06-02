@@ -1,42 +1,21 @@
 https://cn.vuejs.org/v2/guide/
 
+# 快速上手
+[1]npm install -g @vue/cli
+[2]vue ui
+[3]项目根目录下 npm run serve
+
 # 安装
-# CDN引入
-开发模式: https://cdn.jsdelivr.net/npm/vue/dist/vue.js
-生产模式: https://cdn.jsdelivr.net/npm/vue@2.6.12
-原生ES5 Modules:  https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js
+语义化版本控制规范: https://semver.org/lang/zh-CN/
 
-# npm安装
-npm install vue -S
+对不同构建版本的解释: https://cn.vuejs.org/v2/guide/installation.html
 
-# API
-{{data}}
-<!-- 声明式渲染 -->
-# 条件渲染
-<Dom v-if="data"></Dom>
-<Dom v-else="data"></Dom>
+# 介绍
+Vue.js 是什么: Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架
 
-<Dom v-for="data"></Dom>
-<!-- 循环 -->
-<Dom @event="eventHandle"></Dom>
-<!-- 事件 -->
-<Dom v-html="data"></Dom>
-<!-- 输出真正的 HTML -->
-<Dom :attr="data"></Dom>
-<!-- 使用响应式数据 -->
-<Dom>{{JSExpr}}</Dom>
-<!-- 使用js表达式 expr: 表达式 -->
-<Dom :[data]="data"></Dom>
-<!-- 使用动态参数 -->
-
-
-<Dom>slot</Dom>
-
-
-data: Object/Function
-<!-- 数据 -->
-methods: Object
-<!-- 方法 -->
+与自定义元素的关系: Web Components 规范已经完成并通过，但未被所有浏览器原生实现. 
+1.Vue 组件不需要任何 polyfill，并且在所有支持的浏览器 (IE9 及更高版本) 之下表现一致
+2.Vue 组件提供了纯自定义元素所不具备的一些重要功能，最突出的是跨组件数据流、自定义事件通信以及构建工具集成。
 
 # 生命周期
 1)[beforeCreate] [无参数] [可以获取this]
@@ -61,6 +40,28 @@ methods: Object
 <!-- 实例销毁前 -->
 6-2-1)destroyed
 <!-- 实例销毁 拆卸观察者 子组件 和 事件监听器 -->
+
+# 全局异步组件
+Vue.component('component-a', () => import('path') )
+
+# 处理边界情况
+https://cn.vuejs.org/v2/guide/components-edge-cases.html
+
+# 过度 JavaScript 钩子
+[beforeEnter, enter, afterEnter, enterCancelled, beforeLeave, leave, afterLeave, leaveCancelled]
+
+# 状态过渡
+https://cn.vuejs.org/v2/guide/transitioning-state.html
+
+# 渲染函数
+https://cn.vuejs.org/v2/guide/render-function.html
+
+# 插件
+一般有下面几种：
+添加全局方法或者 property。如：vue-custom-element
+添加全局资源：指令/过滤器/过渡等。如 vue-touch
+通过全局混入来添加一些组件选项。如 vue-router
+添加 Vue 实例方法，通过把它们添加到 Vue.prototype 上实现。
 
 #　路由
 [1]前置钩子

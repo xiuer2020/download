@@ -731,7 +731,8 @@ wx.reportEvent
 wx.getExptInfoSync
 数据分析
 wx.reportAnalytics
-支付
+
+# 支付
 wx.requestPayment
 wx.requestOrderPayment
 

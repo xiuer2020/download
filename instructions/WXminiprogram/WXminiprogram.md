@@ -6,6 +6,20 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/
 [2]小程序开发
 [3]小程序发布 https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=125706696
 
+# 目录结构
+`app.json, app.wxss, app.js `
+`page.wxml, page.js, page.wxss, page.json`
+
+# 全局配置 app.json
+https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window
+{entryPagePath,pages,window,tabBar,networkTimeout,debug,functionalPages,subpackages,workers,requiredBackgroundModes,plugins,preloadRule,resizable,usingComponents,permission,sitemapLocation,style,useExtendedLib,entranceDeclare,darkmode,themeLocation,lazyCodeLoading,singlePage}
+entryPagePath: string
+pages: stringArray
+window: {navigationBarBackgroundColor, navigationBarTextStyle, navigationBarTitleText, navigationStyle, default, custom, backgroundColor, backgroundTextStyle, backgroundColorTop, backgroundColorBottom, enablePullDownRefresh, Page.onPullDownRefresh onReachBottomDistance, Page.onReachBottom	, pageOrientation} 
+
+tabBar: {color, selectedColor, backgroundColor, borderStyle, list, position, custom} list: {pagePath, text, iconPath, selectedIconPath}
+usingComponents: {"componentName": "componentPath"}
+
 # 小程序技术发展史
 当微信中的 [WebView] 逐渐成为移动 [Web] 的一个重要入口时，微信就有相关的 `JS API` 了
 2015年初，微信发布了一整套网页开发工具包，称之为 [JS-SDK]
@@ -39,24 +53,6 @@ https://mp.weixin.qq.com/wxamp/wacodepage/getcodepage?token=125706696&lang=zh_CN
 方式1: 后台查看: https://mp.weixin.qq.com/
 方式2: 小程序数据助手
 
-
-# 目录结构
-`app.json, app.wxss, app.js `
-`page.wxml, page.js, page.wxss, page.json`
-
-# 全局配置 app.json
-https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window
-{entryPagePath,pages,window,tabBar,networkTimeout,debug,functionalPages,subpackages,workers,requiredBackgroundModes,plugins,preloadRule,resizable,usingComponents,permission,sitemapLocation,style,useExtendedLib,entranceDeclare,darkmode,themeLocation,lazyCodeLoading,singlePage}
-entryPagePath: string
-pages: stringArray
-window: {navigationBarBackgroundColor, navigationBarTextStyle, navigationBarTitleText, navigationStyle, default, custom, backgroundColor, backgroundTextStyle, backgroundColorTop, backgroundColorBottom, enablePullDownRefresh, Page.onPullDownRefresh onReachBottomDistance, Page.onReachBottom	, pageOrientation} 
-
-tabBar: {color, selectedColor, backgroundColor, borderStyle, list, position, custom} list: {pagePath, text, iconPath, selectedIconPath}
-usingComponents: {"componentName": "componentPath"}
-
-
-# 页面配置
-每一个小程序页面也可以使用同名 .json 文件来对本页面的窗口表现进行配置
 
 # sitemap 配置
 配置其小程序页面是否允许微信索引

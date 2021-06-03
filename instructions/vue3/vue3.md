@@ -41,18 +41,6 @@ vue upgrade --next
 # 起步
 
 
-# 声明式渲染
-定义: `{{data}}`
-
-# 处理用户输入
-定义: `v-model="data"`
-
-# 条件与循环
-定义: `v-if="comdi` `v-else` `v-else-if` `v-show` `v-for="(item, index) in items`
-可在<template> 元素上使用 v-if 条件渲染分组
-利用带有 v-for 的 <template> 来循环渲染一段包含多个元素的内容
-v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销
-v-if 的优先级比 v-for 更高
 
 # 组件化应用构建
 
@@ -67,28 +55,7 @@ Vue.createApp(Option) => vm
 即`应用实例`
 
 
-# 生命周期钩子
-[1]`beforeCreate`回调触发
-[2]`create`回调触发
-[3]`beforeMount`回调触发
-[4]`mounted`回调触发
-[5]``回调触发
-[6]`beforeUpdate`回调触发
-[7]`Updated`回调触发
-[8]`beforeUnmount`回调触发
-[9]`unmounted`回调触发
 
-# 插值
-可配合`v-one, v-html`指令
-可配合`JavaScript` 表达式
-
-# 指令
-可配合`动态参数`
-可配合`修饰符`
-可使用缩写形式`:, @, `
-
-# 注意事项
-`对动态参数值约定, 对动态参数表达式约定`
 
 # Data Property
 Vue.createApp(Options) => vm
@@ -103,21 +70,17 @@ Options.methods: Object
 # 防抖和节流
 <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
 _.debounce(function() { callback }, 500)
-
 # 计算属性
 Vue.createApp(Options) => vm
 Options: Object
 Options.watch: Object
 Options.watch: function(newValu, oldValu){}
-
 # 监听器
 Vue.createApp(Options) => vm
 Options: Object
 Options.computed: Object
-
 # 计算属性缓存 vs 方法
 计算属性是基于它们的反应`依赖关系缓存`的
-
 # 计算属性的 Setter
 Vue.createApp(Options) => vm
 Options: Object

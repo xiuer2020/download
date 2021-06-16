@@ -6,19 +6,32 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/
 [2]小程序开发
 [3]小程序发布 https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=125706696
 
+# 页面生命周期
+渲染层: 
+[1]初始化 
+[2]初始化完成发送`通知`给逻辑层
+[3]等待`逻辑层数据创建完`返回数据, 即`data及setData数据`
+[4]收到`逻辑层数据创建完`返回数据， 进行首次渲染
+[5]首次渲染完成， 发送`渲染层准备就绪`通知给逻辑层
+[6]收到`数据更新`数据, 重新渲染
+
+逻辑层
+[1]创建数据中
+[2]页面`onLoad回调`
+[3]页面`onShow回调`
+[4]`逻辑层数据创建完`发送数据到渲染层
+[5]收到`渲染层准备就绪`通知, 出发`onReady回调`
+[6]页面隐藏触发`onshow回调`
+[7]页面出栈触发`onUnload回调`
+
+
 # 目录结构
 `app.json, app.wxss, app.js `
 `page.wxml, page.js, page.wxss, page.json`
 
 # 全局配置 app.json
 https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window
-{entryPagePath,pages,window,tabBar,networkTimeout,debug,functionalPages,subpackages,workers,requiredBackgroundModes,plugins,preloadRule,resizable,usingComponents,permission,sitemapLocation,style,useExtendedLib,entranceDeclare,darkmode,themeLocation,lazyCodeLoading,singlePage}
-entryPagePath: string
-pages: stringArray
-window: {navigationBarBackgroundColor, navigationBarTextStyle, navigationBarTitleText, navigationStyle, default, custom, backgroundColor, backgroundTextStyle, backgroundColorTop, backgroundColorBottom, enablePullDownRefresh, Page.onPullDownRefresh onReachBottomDistance, Page.onReachBottom	, pageOrientation} 
 
-tabBar: {color, selectedColor, backgroundColor, borderStyle, list, position, custom} list: {pagePath, text, iconPath, selectedIconPath}
-usingComponents: {"componentName": "componentPath"}
 
 # 小程序技术发展史
 当微信中的 [WebView] 逐渐成为移动 [Web] 的一个重要入口时，微信就有相关的 `JS API` 了
@@ -69,23 +82,7 @@ https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html
 # 注册页面
 
 
-# 页面生命周期
-渲染层: 
-[1]初始化 
-[2]初始化完成发送`通知`给逻辑层
-[3]等待`逻辑层数据创建完`返回数据, 即`data及setData数据`
-[4]收到`逻辑层数据创建完`返回数据， 进行首次渲染
-[5]首次渲染完成， 发送`渲染层准备就绪`通知给逻辑层
-[6]收到`数据更新`数据, 重新渲染
 
-逻辑层
-[1]创建数据中
-[2]页面`onLoad回调`
-[3]页面`onShow回调`
-[4]`逻辑层数据创建完`发送数据到渲染层
-[5]收到`渲染层准备就绪`通知, 出发`onReady回调`
-[6]页面隐藏触发`onshow回调`
-[7]页面出栈触发`onUnload回调`
 
 
 # 页面路由

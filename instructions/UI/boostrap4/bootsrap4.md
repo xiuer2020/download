@@ -1,84 +1,8 @@
 https://getbootstrap.net/docs/getting-started/introduction/
-# 引入
-[1]1行css
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-[2]三行js
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-[3]<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-元信息
+# 快速入门vue3+ts
+[1]命令行: npm install bootstrap
+[2]main.ts:  
 
-# 预编译的 Bootstrap文件下载并解压后，你将看到文件夹中包含如下文件：
-  bootstrap/
-  ├── css/
-  │   ├── bootstrap-grid.css
-  │   ├── bootstrap-grid.css.map
-  │   ├── bootstrap-grid.min.css
-  │   ├── bootstrap-grid.min.css.map
-  │   ├── bootstrap-reboot.css
-  │   ├── bootstrap-reboot.css.map
-  │   ├── bootstrap-reboot.min.css
-  │   ├── bootstrap-reboot.min.css.map
-  │   ├── bootstrap.css
-  │   ├── bootstrap.css.map
-  │   ├── bootstrap.min.css
-  │   └── bootstrap.min.css.map
-  └── js/
-      ├── bootstrap.bundle.js
-      ├── bootstrap.bundle.js.map
-      ├── bootstrap.bundle.min.js
-      ├── bootstrap.bundle.min.js.map
-      ├── bootstrap.js
-      ├── bootstrap.js.map
-      ├── bootstrap.min.js
-      └── bootstrap.min.js.map
-
-#　Bootstrap 源码
-  源码包括预编译的 [CSS] 和 [JavaScript] 资源，以及 [Sass]、[JavaScript] 和文档源码。更具体地说，它包括以下甚至更多内容：
-  Copy
-  bootstrap/
-  ├── dist/
-  │   ├── css/
-  │   └── js/
-  ├── site/
-  │   └──content/
-  |      └──docs/
-  |         └── 4.6/
-  |             └── examples/
-  ├── js/
-  └── scss/
-
-#　你可以在 .browserslistrc 文件 中找到 Bootstrap 所支持地浏览器及版本列表：
-  >= 1%
-  last 1 major version
-  not dead
-  Chrome >= 45
-  Firefox >= 38
-  Edge >= 12
-  Explorer >= 10
-  iOS >= 9
-  Safari >= 9
-  Android >= 4.4
-  Opera >= 30
-
-# 浏览器和设备调优
-https://getbootstrap.net/docs/getting-started/browsers-devices/
-
-# javascript脚本
-https://getbootstrap.net/docs/getting-started/javascript/
-
-# 主题化
-https://getbootstrap.net/docs/getting-started/theming/
-
-# 编译工具
-https://getbootstrap.net/docs/getting-started/build-tools/
-
-# Webpack模块化
-https://getbootstrap.net/docs/getting-started/webpack/
-
-# 无障碍浏览
-https://getbootstrap.net/docs/getting-started/accessibility/
 
 # 组件
 提示

@@ -8,11 +8,6 @@ https://vant-contrib.gitee.io/vant/#/zh-CN/
 Vue 2 项目，安装 Vant 2：
 [2]npm i vant@next -S
 Vue 3 项目，安装 Vant 3：
-[3]通过 CDN 安装
-[3-1]<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
-引入 Vue 和 Vant 的 JS 文件
-[3-2]<script src="https://cdn.jsdelivr.net/npm/vant@2.12/lib/vant.min.js"></script>
-[3-3]<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.12/lib/index.css" />
 <!-- 引入样式文件 -->
 
 # 在vue-cli使用

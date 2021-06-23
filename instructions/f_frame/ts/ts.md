@@ -1,3 +1,7 @@
+# 类型声明
+App<IAppOption>()
+
+
 写在前面
 深入理解 TypeScript
 Why

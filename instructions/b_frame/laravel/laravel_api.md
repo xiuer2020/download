@@ -42,7 +42,10 @@ diff($items)
 diffUsing($items, callback $callback)
 *使用回调获取集合中不在给定项中的项。
 
-
+# \Illuminate\Support\Facades\Log
+`::调用`
+info($message);
+输出日志
 
 # Illuminate\Database\Eloquent\Model
 https://laravelacademy.org/post/22017

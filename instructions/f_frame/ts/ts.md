@@ -1,5 +1,67 @@
-# 类型声明
-App<IAppOption>()
+# https://rexdainiel.gitbooks.io/typescript/content/docs/classes.html
+
+# 类型声明类型
+basicType: number, 
+基础类型
+Class
+类
+
+
+
+
+# 类型声明形式
+fn<Option>()
+参数形式
+class Point {
+    x: number;
+    y: number;
+}
+this属性
+fn(arg: Type)
+函数参数
+(): string => {}
+函数返回值
+
+
+# 访问修饰符
+public: 类, 子类, 实例
+protected: 类, 子类
+private: 类
+
+# abstract 抽象
+它可以在 class 上也可以在类的成员上
+abstract 的类不能直接被实例化。用户必须创造一些 class 来继承abstract class。
+abstract 的成员不能直接被访问，而且子类必须提供这个功能。
+
+# class 初始化简写
+class Foo {
+    constructor(public x:number) {
+    }
+}
+
+# __extends 方法
+var __extends = this.__extends || function (d, b) {
+```    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+   复制参数2的属性给参数1  
+```    function __() { this.constructor = d; }
+	构造器的构造方法为 参数1
+    __.prototype = b.prototype;
+    构造器的实例为参数2 的实例
+```    d.prototype = new __();
+	把子类函数的原型设置到父类的 proto 的可选查找成员
+}
+
+
+# 属性初始化器
+class Foo {
+    members = [];  // Initialize directly
+    add(x) {
+        this.members.push(x);
+    }
+}
+
+
+
 
 
 写在前面

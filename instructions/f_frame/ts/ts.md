@@ -1,11 +1,18 @@
 # https://rexdainiel.gitbooks.io/typescript/content/docs/classes.html
 
+# 关键词
+declare
+标注js全局变量的类型.
+readonly
+对象中的一些字段只能在创建的时候被赋值
+
 # 类型声明类型
-basicType: number, 
+basicType: number, string, boolean
 基础类型
 Class
 类
-
+IteratorResult
+迭代器返回值
 
 
 
@@ -21,6 +28,8 @@ fn(arg: Type)
 函数参数
 (): string => {}
 函数返回值
+?
+可能没有 一般加在参数, 属性之后
 
 
 # 访问修饰符

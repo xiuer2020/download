@@ -1,3 +1,43 @@
+# 快速开始
+[1]命令行: git clone https://github.com/anncwb/vben-admin-thin-next.git
+拉取项目
+[2]npm install --ignore-scripts
+安装依赖
+[3]npm run dev
+运行项目
+
+# Meta 配置说明
+export interface RouteMeta {
+  // 路由title  一般必填
+  title: string;
+  // 是否忽略权限，只在权限模式为Role的时候有效
+  ignoreAuth?: boolean;
+  // 可以访问的角色，只在权限模式为Role的时候有效
+  roles?: RoleEnum[];
+  // 是否忽略KeepAlive缓存
+  ignoreKeepAlive?: boolean;
+  // 是否固定标签
+  affix?: boolean;
+  // 图标，也是菜单图标
+  icon?: string;
+  // 内嵌iframe的地址
+  frameSrc?: string;
+  // 指定该路由切换的动画名
+  transitionName?: string;
+  // 隐藏该路由在面包屑上面的显示
+  hideBreadcrumb?: boolean;
+  // 如果该路由会携带参数，且需要在tab页上面显示。则需要设置为true
+  carryParam?: boolean;
+  // 隐藏所有子菜单
+  hideChildrenInMenu?: boolean;
+  // 当前激活的菜单。用于配置详情页时左侧激活的菜单路径
+  currentActiveMenu?: string;
+  // 当前路由不再标签页显示
+  hideTab?: boolean;
+  // 当前路由不再菜单显示
+  hideMenu?: boolean;
+}
+
 # 目录结构
 ├── build # 构建相关脚本
 ├── mock # 模拟数据
@@ -21,42 +61,3 @@
 │   └── views # 页面
 └── types # 类型定义
 
-# 全局组件
-介绍
-icon 图标组件
-button 按钮
-BasicTitle
-BasicArrow
-BasicHelp
-SvgIcon 组件
-使用
-Props
-IconPicker 图标选择器组件
-Page 页面基础组件
-PopConfirmButton 按钮
-Authority 权限组件
-Form 表单组件
-Table 表格
-Modal 弹窗
-Drawer 抽屉组件
-Description 详情组件
-Upload 上传组件
-Tree 树组件
-Loading 组件
-Excel 组件
-ScrollContainer 滚动容器
-CollapseContainer 组件
-LazyContainer 懒加载/延时组件
-Transition 动画组件
-ClickOutSide 组件
-Tinymce 富文本组件
-StrengthMeter 密码强度检测组件
-QrCode 二维码组件
-BasicDragVerify 验证码组件
-Vditor Markdown 编辑器
-VirtualScroll 虚拟滚动组件
-CountTo 数字动画组件
-函数化组件
-Preview 预览组件
-ContextMenu 右键菜单组件
-Loading 组件

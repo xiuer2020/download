@@ -16,6 +16,9 @@ php artisan serve
 php artisan storage:link
 快速创建软链接命令
 
+ php -S localhost:8000 -t public
+运行服务器
+
 # 入门套件
 [1]composer require laravel/breeze --dev
 安装breeze

@@ -3,7 +3,13 @@ https://laravel-admin.org/docs/zh/1.x
 # 简介
 laravel-admin 是一个可以快速帮你构建后台管理的工具，它提供的页面组件和表单元素等功能，能帮助你使用很少的代码就实现功能完善的后台管理功能
 
-# 安装
+# 快速开始
+添加路由 在路由配置文件app/Admin/routes.php里添加一行：
+$router->resource('users', UserController::class) 
+
+菜单管理页http://localhost:8000/admin/auth/menu
+
+# 目录结构
 安装完成之后，laravel-admin所有的配置都在config/admin.php文件中
 后台的安装目录为app/Admin，之后大部分的后台开发编码工作都是在这个目录下进行
 app/Admin/routes.php文件用来配置后台路由。
@@ -11,9 +17,7 @@ app/Admin/bootstrap.php 是laravel-admin的启动文件, 使用方法请参考�
 app/Admin/Controllers目录用来存放后台控制器文件，该目录下的HomeController.php文件是后台首页的显示控制器，ExampleController.php为实例文件。
 后台所需的前端静态文件在/public/vendor/laravel-admin目录下.
 
-# 快速开始
-菜单管理页http://localhost:8000/admin/auth/menu
-在路由配置文件app/Admin/routes.php里添加一行：$router->resource('users', UserController::class) 添加路由
+
 
 
 

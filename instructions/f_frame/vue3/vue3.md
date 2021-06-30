@@ -1,7 +1,9 @@
 https://v3.cn.vuejs.org/guide/installation.html
 
-# 安装
+# 快速开始
 方式: [`cdn, npm, cli`]
+
+
 
 # 发布版本说明
 https://github.com/vuejs/vue-next/blob/master/CHANGELOG.md

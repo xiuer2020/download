@@ -87,7 +87,27 @@ teleport
 
 # 响应性 API
 响应性基础 API
-Refs
+reactive
+readonly
+isProxy
+isReactive
+isReadonly
+toRaw
+markRaw
+shallowReactive
+shallowReadonly
+
+# Ref
+ref
+unref
+toRef
+toRefs
+isRef
+customRef
+shallowRef
+triggerRef
+Computed 与 watch
+
 Computed 与 watch
 
 # 组合式 API

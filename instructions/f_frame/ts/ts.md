@@ -5,6 +5,10 @@ declare
 标注js全局变量的类型.
 readonly
 对象中的一些字段只能在创建的时候被赋值
+T
+泛型, 关键目的是在成员之间提供有意义的约束. 成员可以是： 类的实例成员, 类的方法, 函数参数, 函数返回值
+infer 
+在 extends 条件语句中待推断的类型变量
 
 # 类型声明类型
 basicType: number, string, boolean

@@ -232,6 +232,8 @@ add(batch_action_instance)
 
 
 # Encore\Admin\Grid 之 grid_instance->filter(callback_arg) 之 callback_arg
+$filter->equal('user_id','用户')->select(User::pluck('name', 'id'));
+过滤
 column('proportion1/2', function ($filter))
 多列布局
 group('field_name', function ($group)))

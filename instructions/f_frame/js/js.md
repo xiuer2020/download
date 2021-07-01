@@ -27,51 +27,20 @@ for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 ```
 
 # new
-```instance = {__proto__ : Fn.prototype}
+```instance = {__proto__ : Father.prototype}
 ```
 
-# api
-Function.prototype.length
-指定函数期望的参数数量
+# 原始类型转换
+https://www.cnblogs.com/f6056/p/10893586.html
 
-Function.prototype.name
-函数的名称
-
-Fuction.prototype.bind(thisArg[, arg1[, arg2[, ...argN]]]) => func
-Fuction.prototype.call([thisArg[, arg1, arg2, ...argN]]) => func
-Fuction.prototype.apply(thisArg, [ argsArray]) => func
-
-Fuction.prototype.toString => stri
-
-Object.prototype.valueOf() => any
-Object.prototype.toString() => stri
-Object.prototype.isPrototypeOf(object) => bool
-Object.prototype.hasOwnProperty(prop) => bool
-Object.prototype.toLocaleString() => stri
-Object.prototype.propertyIsEnumerable(prop) => bool
-
-Object.is(value1, value2) => bool
-
-Object.assign(target, ...sources) => targObje
-Object.create(proto, [propertiesObject]) => obje
-Object.createisExtensible(obj) => obje
-Object.fromEntries(iterable) => obj
-Object.defineProperty(obj, prop, descriptor) => obj
-Object.getPrototypeOf(obj) => obj | null
-Object.setPrototypeOf(obj, prototype) => obj
-Object.defineProperties(obj, props) => obj
-Object.preventExtensions(obj) => obj
-
-Object.freeze(obj) => obje
-Object.isFrozen(obj) => bool
-
-Object.seal(obj) => obje
-Object.isSealed(obj) => bool
-
-Object.keys(obj) => arra
-Object.values(obj) => arra
-Object.entries(obj) => arra
-
+# JavaScript 变量的生存期
+  JavaScript 变量的生命期从它们被声明的时间开始。
+  局部变量会在函数运行以后被删除。
+  全局变量会在页面关闭后被删除。
+  
+  
+  
+  
 
 
 

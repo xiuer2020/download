@@ -1,3 +1,8 @@
+# 插件使用
+[1]github现在源文件
+[2]IDE中 首选项 > 浏览器插件目录 > 新建文件夹并粘贴源文件
+[3]重启
+
 # 快捷键
 https://www.cnblogs.com/doscho/p/6500440.html
 

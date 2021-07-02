@@ -4,12 +4,12 @@ field(字段名, 展示名)
 
 # form表单
 `->调用`
-text('字段名', __('展示名'));
-textarea('字段名', __('展示名'));
-datetime('字段名', __('展示名'))->default(date('Y-m-d H:i:s'));
-text('字段名', __('展示名'));
-number('字段名', __('展示名'));
-datetime('字段名', __('展示名'));
+text('字段名', '展示名');
+textarea('字段名', '展示名');
+datetime('字段名', '展示名')->default(date('Y-m-d H:i:s'));
+text('字段名', '展示名');
+number('字段名', '展示名');
+datetime('字段名', '展示名');
 
 # Illuminate\Routing\Controller 之 AdminController
 protected $title = 'Title'
@@ -232,8 +232,6 @@ add(batch_action_instance)
 
 
 # Encore\Admin\Grid 之 grid_instance->filter(callback_arg) 之 callback_arg
-$filter->equal('user_id','用户')->select(User::pluck('name', 'id'));
-过滤
 column('proportion1/2', function ($filter))
 多列布局
 group('field_name', function ($group)))

@@ -97,6 +97,7 @@ toUpperCase
 # Dom
 HTMLDivElement.prototype
 HTMLElement.prototype
+HTMLInputElement 
 HTMLCanvasElement.prototype
 CanvasRenderingContext2D.prototype
 HTMLVideoElement.prototype

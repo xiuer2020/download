@@ -1,0 +1,65 @@
+.generate-ml(@n, @i: 0) when (@i =< @n) {
+  .ml@{i} {
+    margin-left: @i*1px !important;
+  }
+  .generate-ml(@n, (@i + 4));
+}
+.generate-ml(36);
+
+.generate-mr(@n, @i: 0) when (@i =< @n) {
+  .mr@{i} {
+    margin-right: @i*1px !important;
+  }
+  .generate-mr(@n, (@i + 4));
+}
+.generate-mr(36);
+
+.generate-mt(@n, @i: 0) when (@i =< @n) {
+  .mt@{i} {
+    margin-top: @i*1px !important;
+  }
+  .generate-mt(@n, (@i + 4));
+}
+.generate-mt(36);
+
+
+.generate-mb(@n, @i: 0) when (@i =< @n) {
+  .mb@{i} {
+    margin-bottom: @i*1px !important;
+  }
+  .generate-mb(@n, (@i + 4));
+}
+.generate-mb(36);
+
+.generate-pl(@n, @i: 0) when (@i =< @n) {
+  .pl@{i} {
+    padding-left: @i*1px !important;
+  }
+  .generate-pl(@n, (@i + 4));
+}
+.generate-pl(36);
+
+.generate-pr(@n, @i: 0) when (@i =< @n) {
+  .pr@{i} {
+    padding-right: @i*1px !important;
+  }
+  .generate-pr(@n, (@i + 4));
+}
+.generate-pr(36);
+
+.generate-pt(@n, @i: 0) when (@i =< @n) {
+  .pt@{i} {
+    padding-top: @i*1px !important;
+  }
+  .generate-pt(@n, (@i + 4));
+}
+.generate-pt(36);
+
+
+.generate-pb(@n, @i: 0) when (@i =< @n) {
+  .pb@{i} {
+    padding-bottom: @i*1px !important;
+  }
+  .generate-pb(@n, (@i + 4));
+}
+.generate-pb(36);
